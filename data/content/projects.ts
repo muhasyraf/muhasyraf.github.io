@@ -4,20 +4,19 @@ import { Project } from "types";
 const projects: Project[] = [
   {
     id: 0,
-    title: "Learn.TheYEI",
-    desc: "All the resources you will need to get a boost into economics.",
+    title: "BarokahBiz: Full-fledged Enterprise Web App",
+    desc: "Desc here ...",
     img: "/static/projects/yei-learn.png",
-    link: "https://learn.theyei.org/",
-    github: "https://github.com/braydentw/learn.theyei",
-    tags: ["React", "NextJS", "TailwindCSS", "CSS", "Firebase"],
+    github: "https://github.com/muhasyraf/easyterprise",
+    tags: ["PHP", "Laravel", "Bootstrap 5", "MariaDB"],
   },
   {
     id: 1,
-    title: "BuildFaster",
-    desc: "Beautiful HTML templates ready-made for your next landing page.",
+    title: "Miltactoe: Tic Tac Toe Game at its Peak",
+    desc: "Desc here ...",
     img: "/static/projects/buildfaster.png",
-    link: "https://buildfaster.co/",
-    tags: ["HTML", "CSS", "Javascript", "Gumroad"],
+    github: "https://github.com/muhasyraf/odin-miltactoe",
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS"],
   },
   {
     id: 2,
@@ -71,14 +70,12 @@ const projects: Project[] = [
   },
 ];
 
-export const allTags = []
+export const allTags = [];
 
 projects.forEach((project) => {
-  project.tags.forEach((tag) => !allTags.includes(tag) && allTags.push(tag))
+  project.tags.forEach((tag) => !allTags.includes(tag) && allTags.push(tag));
 });
 
-export const allKebabTags = allTags.map(tag => (
-  kebabCase(tag)
-))
+export const allKebabTags = allTags.map((tag) => kebabCase(tag));
 
-export default projects
+export default projects;
