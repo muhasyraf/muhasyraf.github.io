@@ -1,24 +1,15 @@
 type Skill = {
-  title: string,
-  icon: string,
-  style?: object
+  title: string;
+  icon: string;
+  style?: object;
 };
 type Testimonial = {
-  quote: string,
-  name: string,
-  job: string
+  quote: string;
+  name: string;
+  job: string;
 };
 
-
 export const skills: Skill[] = [
-  {
-    title: "HTML",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-  },
-  {
-    title: "CSS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-  },
   {
     title: "Javascript",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
@@ -53,32 +44,40 @@ export const skills: Skill[] = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   },
   {
-    title: "Firebase",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+    title: "Laravel",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg",
   },
   {
-    title: "Figma",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+    title: "ExpressJS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+  },
+  {
+    title: "MongoDB",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  },
+  {
+    title: "MySQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
   },
 ];
 
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "The communication throughout the project was spot on and the genre of design was carried out well.",
-    name: "Wilson Bright",
-    job: "Co-Founder of BlockSurvey",
+      "I've worked with many developers over the years, and Asyraf is one of the best I've come across. He's a great communicator, a talented developer, and a pleasure to work with. I highly recommend him!",
+    name: "Dylan Lea",
+    job: "Founder of Build Faster",
   },
   {
     quote:
-      "The code was clean, easy to understand, and exactly what I was looking for.",
-    name: "Philip Imperato",
-    job: "CEO of VisualBonus",
+      "Asyraf is a great developer. He's fast, reliable, and has a great eye for design. I highly recommend him!",
+    name: "Josh W Comeau",
+    job: "CTO of Kite Tail",
   },
   {
     quote:
-      "My vision was executed perfectly. The quality and speed of the work was excellent.",
-    name: "Zach Green",
-    job: "Founder of Hangxiety Shrink",
+      "His work is always top-notch, and he's a pleasure to work with. I highly recommend him!",
+    name: "Shareef Jackson",
+    job: "VP of Engineering at Tynker",
   },
 ];

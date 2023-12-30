@@ -9,11 +9,11 @@ function Navbar({ currentPage }) {
         <Link href="/">
           <span className="font-black text-xl flex items-center">
             <img
-              className="mr-2 transform hover:rotate-360 hover:scale-75 transition-transform duration-500"
-              src="/static/logos/logo_no_text.svg"
-              width="60"
+              className="mr-2 transform hover:rotate-360 hover:scale-75 transition-transform duration-500 rounded-full"
+              src="/static/img/linkedinprofilecrop.png"
+              width="45"
             />
-            {"muhasyraf".split("").map((letter, index) => {
+            {"Asyraf".split("").map((letter, index) => {
               return (
                 <span
                   key={index}
