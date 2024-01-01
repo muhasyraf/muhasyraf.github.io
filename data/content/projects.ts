@@ -23,7 +23,6 @@ const projects: Project[] = [
     title: "Sistem Informasi Monitoring dan Evaluasi, Badan Pusat Statistik",
     desc: "Sistem terintegrasi untuk memonitor dan mengevaluasi kinerja pegawai dan realisasi anggaran di BPS.",
     img: "/static/projects/react-emoji-search.png",
-    link: "https://react-emoji-search.braydentw.vercel.app/",
     github: "https://github.com/muhasyraf/bps-simonev",
     tags: ["PHP", "Laravel", "Livewire", "Tailwind CSS", "MariaDB"],
   },
@@ -36,5 +35,9 @@ projects.forEach((project) => {
 });
 
 export const allKebabTags = allTags.map((tag) => kebabCase(tag));
+
+export const allKebabTitles = projects.map((project) => {
+  return kebabCase(project.title);
+});
 
 export default projects;

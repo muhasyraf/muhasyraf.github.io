@@ -50,6 +50,7 @@ export const skills: Skill[] = [
   {
     title: "ExpressJS",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    style: { filter: "invert(1)" },
   },
   {
     title: "MongoDB",

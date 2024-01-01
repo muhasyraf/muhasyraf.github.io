@@ -2,17 +2,20 @@ import React from "react";
 
 type HeadingProps = {
   tag?: string;
+  title?: string;
 };
 
-function Heading({ tag }: HeadingProps) {
+function Heading({ tag, title }: HeadingProps) {
   return (
     <div
-      className={`${tag ? "pt-10 pb-4 sm:pt-24 sm:pb-20" : "py-12 sm:py-20"} w-full text-center relative`}
+      className={`${
+        tag || title ? "pt-10 pb-4 sm:pt-24 sm:pb-20" : "py-12 sm:py-20"
+      } w-full text-center relative`}
     >
-      {tag ? (
+      {tag || title ? (
         <>
           <h1 className="text-3xl sm:text-4xl inline-block w-auto mx-auto mb-8 relative">
-            Projects built with <b>{tag}</b>
+            {tag ? `${tag} Projects` : title}
             <img
               className="sqD w-8 sm:w-10 -top-6 -right-2 sm:-right-8 sm:-top-8 absolute"
               src="/static/doodles/hero/code.svg"
@@ -28,13 +31,14 @@ function Heading({ tag }: HeadingProps) {
           />
         </h1>
       )}
-      {!tag && (
-        <p className="text-fun-gray text-xl sm:text-2xl max-w-3xl m-auto">
-          I've built cool apps and websites using anything from HTML to React
-          (and even PHP!). Here are some of my favorite projects over the course
-          of my journey.
-        </p>
-      )}
+      {!tag ||
+        (!title && (
+          <p className="text-fun-gray text-xl sm:text-2xl max-w-3xl m-auto">
+            I've built cool apps and websites using anything from HTML to React
+            (and even PHP!). Here are some of my favorite projects over the
+            course of my journey.
+          </p>
+        ))}
     </div>
   );
 }
