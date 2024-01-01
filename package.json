@@ -4,8 +4,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "serve": "next serve",
-    "export": "next export"
+    "serve": "next serve"
   },
   "dependencies": {
     "@mapbox/rehype-prism": "^0.8.0",
