@@ -1,7 +1,7 @@
-import { kebabCase, kebabArray } from "@/utils/utils";
+import { KebabCase, KebabArray } from "@/utils/utils";
 import { Project } from "types";
 
-const projects: Project[] = [
+const Projects: Project[] = [
   {
     id: 0,
     title: "BarokahBiz: Full-fledged Enterprise Web App",
@@ -28,16 +28,16 @@ const projects: Project[] = [
   },
 ];
 
-export const allTags = [];
+const AllTags = [];
 
-projects.forEach((project) => {
-  project.tags.forEach((tag) => !allTags.includes(tag) && allTags.push(tag));
+Projects.forEach((project) => {
+  project.tags.forEach((tag) => !AllTags.includes(tag) && AllTags.push(tag));
 });
 
-export const allKebabTags = allTags.map((tag) => kebabCase(tag));
+const AllKebabTags = AllTags.map((tag) => KebabCase(tag));
 
-export const allKebabTitles = projects.map((project) => {
-  return kebabCase(project.title);
+const AllKebabTitles = Projects.map((project) => {
+  return KebabCase(project.title);
 });
 
-export default projects;
+export { Projects, AllTags, AllKebabTags, AllKebabTitles };

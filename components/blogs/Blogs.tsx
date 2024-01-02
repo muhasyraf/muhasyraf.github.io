@@ -1,23 +1,40 @@
 import React from "react";
-import { designs } from "@/data/content/designs";
+import Link from "next/link";
+import { Blogs } from "@/data/content/blogs";
+import { KebabCase } from "@/utils/utils";
 
-function Blogs() {
+const BlogData = Blogs.sort((a, b) => {
+  return new Date(b.date).getTime() - new Date(a.date).getTime();
+});
+
+function BlogsPage() {
   return (
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-start">
-      {designs.map((item, index) => {
+    <div className="flex flex-col gap-2">
+      {BlogData.map((item, index) => {
         return (
-          <div className="w-full" key={index}>
-            <a href={item.link} target="_blank" className="w-full">
-              <img
-                className="w-full h-96 hover:opacity-75 transition-opacity object-cover"
-                src={item.img}
-              />
-            </a>
+          <div className="flex flex-col gap-1 text-start" key={index}>
+            <Link href={`/blogs/${KebabCase(item.title)}`} className="w-full">
+              <h1 className="text-2xl sm:text-4xl font-bold text-fun-pink-light italic">
+                {item.title}
+              </h1>
+            </Link>
+            <p className="text-sm text-fun-pink">
+              {item.date.toLocaleDateString(undefined, {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </p>
+            <p className="text-base sm:text-lg text-fun-gray-light max line-clamp-2">
+              {item.body[0].content}
+            </p>
+            <div className="divider"></div>
           </div>
         );
       })}
+      <Link href={`/`}>Back to home</Link>
     </div>
   );
 }
 
-export default Blogs;
+export default BlogsPage;

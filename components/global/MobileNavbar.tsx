@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import Link from "next/link";
-import { routes } from "@/data/global";
+import { Routes } from "@/data/global";
 import useDelayedRender from "use-delayed-render";
 
 export default function MobileNavbar() {
@@ -44,6 +44,7 @@ export default function MobileNavbar() {
               className="mr-3 rounded-full"
               src="/static/img/linkedinprofilecrop.png"
               width="65"
+              alt="Asyraf's Profile Picture"
             />
           </Link>
         </li>
@@ -62,7 +63,7 @@ export default function MobileNavbar() {
           className={`menu flex flex-col absolute bg-bg
             ${isMenuRendered && "menuRendered"}`}
         >
-          {routes.map((item, index) => {
+          {Routes.map((item, index) => {
             return (
               <li
                 className="border-b border-gray-900 text-gray-100 text-sm font-semibold"

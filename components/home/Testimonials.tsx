@@ -1,13 +1,13 @@
 import React from "react";
 import SectionTitle from "../global/SectionTitle";
-import { testimonials } from "@/data/content/home";
+import { Testimonials } from "@/data/content/home";
 
-function Testimonials() {
+function TestimonialsPage() {
   return (
     <div className="flex flex-col text-left max-w-md md:max-w-full w-full m-auto">
       <SectionTitle title="Here is where i put my thoughts, expressions, & feelings" />
       <div className="max-w-5xl m-auto md:max-h-[200px] grid grid-cols-1 gap-10 md:gap-10 md:grid-cols-3 items-start">
-        {testimonials.map((item, index) => {
+        {Testimonials.map((item, index) => {
           return (
             <div
               key={index}
@@ -24,6 +24,7 @@ function Testimonials() {
                 <img
                   className="sqD top-[-30px] right-[-15px] w-11"
                   src="/static/doodles/testimonials/squiggle2.svg"
+                  alt="squiggle"
                 />
               )}
             </div>
@@ -34,4 +35,4 @@ function Testimonials() {
   );
 }
 
-export default Testimonials;
+export default TestimonialsPage;

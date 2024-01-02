@@ -25,7 +25,7 @@ module.exports = {
     extend: {
       colors: {
         bg: "#1c1410",
-        "fun-gray-light": "#b2bbcf",
+        "fun-gray-light": "#c0daed",
         "fun-gray": "#7b89a8",
         "fun-gray-medium": "#767c85",
         "fun-gray-darker": "#2a2a2c",
@@ -35,7 +35,7 @@ module.exports = {
         "fun-pink-darker": "#0f1b1f",
         "fun-pink-darkest": "#080f12",
         "fun-pink-dark": "#246c82",
-        "fun-pink-light": "#a4e1f5",
+        "fun-pink-light": "#c7f2ff",
       },
       rotate: {
         360: "360deg",
@@ -57,5 +57,9 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+    require("daisyui"),
+  ],
 };

@@ -1,13 +1,13 @@
 import Link from "next/link";
 import React from "react";
-import { footer } from "@/data/global";
+import { Footer } from "@/data/global";
 import Image from "next/image";
 
-function Footer() {
+function FooterPage() {
   return (
     <footer className="flex flex-col w-screen px-5 py-10 border-t border-fun-pink-darker z-5 bg-bg">
       <div className="w-full max-w-4xl m-auto grid grid-cols-2 sm:grid-cols-3 justify-between items-start">
-        {footer.columns.map((item, index) => {
+        {Footer.columns.map((item, index) => {
           return (
             <div key={index} className="text-left mb-5 sm:mb-0">
               <h4 className="uppercase text-fun-gray text-sm font-bold">
@@ -50,34 +50,36 @@ function Footer() {
             Support My Work
           </h4>
           <div className="space-y-2 mt-4 w-full flex items-center sm:items-start flex-col">
-            {footer.support.buymeacoffee !== "" && (
+            {Footer.support.buymeacoffee !== "" && (
               <div>
                 <a
-                  href={`https://buymeacoffee.com/${footer.support.buymeacoffee}`}
+                  href={`https://buymeacoffee.com/${Footer.support.buymeacoffee}`}
                   target="_blank"
                 >
                   <img
                     src="/static/misc/buy-me-a-coffee.svg"
                     className="h-12 mr-2 hover:opacity-80 opacity-100 transition-opacity"
+                    alt="Buy Me A Coffee"
                   />
                 </a>
               </div>
             )}
-            {footer.support.paypal !== "" && (
+            {Footer.support.paypal !== "" && (
               <div>
                 <a
-                  href={`https://paypal.me/${footer.support.paypal}`}
+                  href={`https://paypal.me/${Footer.support.paypal}`}
                   target="_blank"
                 >
                   <img
                     src="/static/misc/paypal.svg"
                     className="h-12 mr-2 hover:opacity-80 opacity-100 transition-opacity"
+                    alt="Paypal"
                   />
                 </a>
               </div>
             )}
             <p className="text-fun-gray text-xs pt-1">
-              {footer.support.message}
+              {Footer.support.message}
             </p>
           </div>
         </div>
@@ -131,7 +133,7 @@ function Footer() {
           className="w-auto inline-flex items-center sm:w-auto font-bold flex-shrink text-xs border border-fun-pink px-4 py-2 rounded-xl text-fun-pink cursor-pointer opacity-50"
           href="https://github.com/muhasyraf/muhasyraf.github.io"
           target="_blank"
-          rel="nooreferrer"
+          rel="noopener nooreferrer"
         >
           <Image
             src="/static/icons/github.svg"
@@ -146,4 +148,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default FooterPage;

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { kebabCase } from "@/utils/utils";
+import { KebabCase } from "@/utils/utils";
 import Link from "next/link";
 
 function ProjectCard({ project }) {
@@ -10,14 +10,18 @@ function ProjectCard({ project }) {
       key={project.id}
     >
       <Link
-        href={`/projects/${kebabCase(project.title)}`}
+        href={`/projects/${KebabCase(project.title)}`}
         className={`w-full relative rounded-xl border-fun-gray border p-2 transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard`}
       >
-        <img className="w-full rounded-md" src={project.img} />
+        <img
+          className="w-full rounded-md"
+          src={project.img}
+          alt="Project Image"
+        />
       </Link>
       <div className="w-full mt-5">
         <div className="flex projects-center justify-between">
-          <Link href={`/projects/${kebabCase(project.title)}`}>
+          <Link href={`/projects/${KebabCase(project.title)}`}>
             <h3 className="text-lg font-bold text-fun-pink-light">
               {project.title}
             </h3>
@@ -50,7 +54,7 @@ function ProjectCard({ project }) {
           {project.tags.map((tag, index) => {
             return (
               <li key={tag}>
-                <Link href={`/projects/tag/${kebabCase(tag)}`}>
+                <Link href={`/projects/tag/${KebabCase(tag)}`}>
                   <div className="m-1 rounded-lg text-sm bg-fun-pink text-bg py-1 px-2 cursor-pointer hover:opacity-75">
                     {tag}
                   </div>

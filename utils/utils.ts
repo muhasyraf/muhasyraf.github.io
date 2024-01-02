@@ -1,4 +1,4 @@
-export const kebabCase = (str: string) =>
+export const KebabCase = (str: string) =>
   str
     .replace(/([a-z])([A-Z])/g, "$1-$2")
     .replace(/[:]/g, "")
@@ -8,9 +8,9 @@ export const kebabCase = (str: string) =>
     .replace(/[\s_]+/g, "-")
     .toLowerCase();
 
-export const kebabArray = (arr: any[]) => arr.map((item) => kebabCase(item));
+export const KebabArray = (arr: any[]) => arr.map((item) => KebabCase(item));
 
-export const randomNumberText = (finalNum: string, setNumber) => {
+export const RandomNumberText = (finalNum: string, setNumber) => {
   let count = 0;
   let newNum = "";
   const interval = setInterval(() => {

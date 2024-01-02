@@ -9,7 +9,7 @@ type Testimonial = {
   job: string;
 };
 
-export const skills: Skill[] = [
+export const Skills: Skill[] = [
   {
     title: "Javascript",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
@@ -62,7 +62,7 @@ export const skills: Skill[] = [
   },
 ];
 
-export const testimonials: Testimonial[] = [
+export const Testimonials: Testimonial[] = [
   {
     quote:
       "I've worked with many developers over the years, and Asyraf is one of the best I've come across. He's a great communicator, a talented developer, and a pleasure to work with. I highly recommend him!",

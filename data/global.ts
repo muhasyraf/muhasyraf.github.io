@@ -22,7 +22,7 @@ type Footer = {
   };
 };
 
-export const routes: Route[] = [
+export const Routes: Route[] = [
   {
     title: "Home",
     path: "/",
@@ -41,7 +41,7 @@ export const routes: Route[] = [
   },
 ];
 
-export const footer: Footer = {
+export const Footer: Footer = {
   columns: [
     {
       title: "Pages",

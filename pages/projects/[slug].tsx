@@ -1,15 +1,14 @@
 import Page from "components/utility/Page";
 import { GetStaticProps, GetStaticPaths } from "next";
-import { allKebabTitles, allKebabTags, allTags } from "@/data/content/projects";
-import projects from "@/data/content/projects";
-import { kebabCase, kebabArray } from "@/utils/utils";
+import { AllKebabTitles, Projects } from "@/data/content/projects";
+import { KebabCase } from "@/utils/utils";
 import Heading from "components/projects/Heading";
 import Link from "next/link";
 import Image from "next/image";
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const allTitlesPaths = allKebabTitles.map((path) => ({
-    params: { slug: `${kebabCase(path)}` },
+  const allTitlesPaths = AllKebabTitles.map((path) => ({
+    params: { slug: `${KebabCase(path)}` },
   }));
   return {
     paths: allTitlesPaths,
@@ -23,8 +22,8 @@ export const getStaticProps: GetStaticProps = async ({
   params: { slug: string };
 }) => {
   const slug = params.slug;
-  const filteredProjects = projects.filter((project) => {
-    return kebabCase(project.title) === slug;
+  const filteredProjects = Projects.filter((project) => {
+    return KebabCase(project.title) === slug;
   });
   return {
     props: JSON.parse(
@@ -57,7 +56,7 @@ function PostPage({ filteredProjects, slug }) {
             {filteredProjects[0].tags.map((tag, index) => {
               return (
                 <li key={tag}>
-                  <Link href={`/projects/tag/${kebabCase(tag)}`}>
+                  <Link href={`/projects/tag/${KebabCase(tag)}`}>
                     <div className="m-1 rounded-lg text-sm bg-fun-pink text-bg py-1 px-2 cursor-pointer hover:opacity-75">
                       {tag}
                     </div>
@@ -83,9 +82,7 @@ function PostPage({ filteredProjects, slug }) {
             </a>
           </div>
         </div>
-        <p className="text-fun-gray-light text-start mt-5">
-          {filteredProjects[0].desc}
-        </p>
+        <p className="text-start mt-3">{filteredProjects[0].desc}</p>
       </div>
       <Link href="/projects">
         <div className="text-fun-gray-light hover:underline mt-5 block">

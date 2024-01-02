@@ -4,7 +4,7 @@ type Design = {
   link: string;
 };
 
-export const designs: Design[] = [
+export const Designs: Design[] = [
   {
     label: "Mobile Shopping App",
     img: "/static/designs/mobile-shopping-app.jpg",

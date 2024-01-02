@@ -1,13 +1,13 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import { randomNumberText } from "@/utils/utils";
+import { RandomNumberText } from "@/utils/utils";
 import { useEffect } from "react";
 
 function Page404() {
   const [num404, setNum404] = useState("0000");
 
   useEffect(() => {
-    randomNumberText("404", setNum404);
+    RandomNumberText("404", setNum404);
   }, []);
 
   return (

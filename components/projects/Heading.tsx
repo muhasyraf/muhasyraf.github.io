@@ -14,20 +14,22 @@ function Heading({ tag, title }: HeadingProps) {
     >
       {tag || title ? (
         <>
-          <h1 className="text-3xl sm:text-4xl inline-block w-auto mx-auto mb-8 relative">
+          <h1 className="text-3xl sm:text-4xl inline-block w-auto mx-auto mb-8 relative font-bold text-fun-pink">
             {tag ? `${tag} Projects` : title}
             <img
               className="sqD w-8 sm:w-10 -top-6 -right-2 sm:-right-8 sm:-top-8 absolute"
               src="/static/doodles/hero/code.svg"
+              alt="code"
             />
           </h1>
         </>
       ) : (
-        <h1 className="text-4xl sm:text-6xl inline-block w-auto mx-auto mb-8 relative">
+        <h1 className="text-4xl sm:text-6xl inline-block w-auto mx-auto mb-8 relative font-bold text-fun-pink">
           Projects
           <img
             className="sqD w-10 -top-8 -right-8 absolute"
             src="/static/doodles/hero/code.svg"
+            alt="code"
           />
         </h1>
       )}

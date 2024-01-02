@@ -1,23 +1,22 @@
 import Page from "components/utility/Page";
 import { GetStaticProps, GetStaticPaths } from "next";
-import { allKebabTags, allTags } from "@/data/content/projects";
-import projects from "@/data/content/projects";
-import { kebabCase, kebabArray } from "@/utils/utils";
-import Projects from "components/projects/Projects";
+import { AllKebabTags, AllTags, Projects } from "@/data/content/projects";
+import { KebabCase, KebabArray } from "@/utils/utils";
+import ProjectsPage from "components/projects/Projects";
 import Heading from "components/projects/Heading";
 import More from "components/projects/More";
 import Link from "next/link";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const allTags = [];
-  projects.forEach((project) =>
+  Projects.forEach((project) =>
     project.tags.forEach((tag) => {
       allTags.push(tag);
     })
   );
   const uniqueAllTags = [...new Set(allTags)];
   const allTagsPaths = uniqueAllTags.map((path) => ({
-    params: { tag: `${kebabCase(path)}` },
+    params: { tag: `${KebabCase(path)}` },
   }));
   return {
     paths: allTagsPaths,
@@ -31,8 +30,8 @@ export const getStaticProps: GetStaticProps = async ({
   params: { tag: string };
 }) => {
   const tag = params.tag;
-  const filteredProjects = projects.filter((project) =>
-    [...kebabArray(project.tags)].includes(tag)
+  const filteredProjects = Projects.filter((project) =>
+    [...KebabArray(project.tags)].includes(tag)
   );
   return {
     props: JSON.parse(
@@ -45,7 +44,7 @@ export const getStaticProps: GetStaticProps = async ({
 };
 
 function PostPage({ filteredProjects, tag }) {
-  const capsTag = allTags[allKebabTags.indexOf(tag)];
+  const capsTag = AllTags[AllKebabTags.indexOf(tag)];
   return (
     <Page
       currentPage="Projects"
@@ -55,7 +54,7 @@ function PostPage({ filteredProjects, tag }) {
       }}
     >
       <Heading tag={capsTag} />
-      <Projects overwriteProjects={filteredProjects} />
+      <ProjectsPage overwriteProjects={filteredProjects} />
 
       <Link href="/projects">
         <div className="mt-8 max-w-sm md:max-w-2xl border border-fun-pink mx-auto text-center w-full whitespace-nowrap px-8 py-3 rounded-full text-fun-pink bg-fun-pink-darkerer hover:bg-fun-pink hover:text-white transition-colors cursor-pointer">

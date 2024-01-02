@@ -8,6 +8,7 @@ function More() {
         className="text-fun-pink underline"
         href="https://github.com/muhasyraf"
         target="_blank"
+        rel="noopener noreferrer"
       >
         my GitHub
       </a>
