@@ -26,7 +26,7 @@ export const getStaticProps: GetStaticProps = async ({
     return KebabCase(blog.title) === slug;
   });
   return {
-    props: JSON.parse(
+    props: await JSON.parse(
       JSON.stringify({
         filteredBlogs,
         slug: slug,
@@ -54,7 +54,14 @@ const PostPage = ({ filteredBlogs, slug }) => {
           />
         )}
         <div className="mt-2 text-sm font-light text-fun-gray-light flex flex-col items-start gap-1 w-full">
-          <p>Posted at {filteredBlogs[0].date} </p>
+          <p>
+            Posted at{" "}
+            {new Date(filteredBlogs[0].date).toLocaleDateString(undefined, {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </p>
           <p>
             by Muhammad{" "}
             <span className="text-fun-pink font-medium">Asyraf</span> Faiz Kamil
@@ -68,7 +75,7 @@ const PostPage = ({ filteredBlogs, slug }) => {
                 <h1 className="text-2xl sm:text-4xl font-medium text-fun-pink-light">
                   #<span className="font-bold italic">{section.title}</span>
                 </h1>
-                <p className="mt-2 text-base sm:text-lg font-normal text-fun-gray-light">
+                <p className="mt-2 text-base sm:text-lg font-normal text-fun-gray-light px-5">
                   {section.content}
                 </p>
               </div>

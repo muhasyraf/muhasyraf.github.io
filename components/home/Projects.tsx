@@ -6,13 +6,19 @@ import ProjectCard from "../projects/ProjectCard";
 
 function ProjectsPage() {
   return (
-    <div className="flex flex-col text-left justify-between pt-8 relative">
+    <div className="flex flex-col text-left justify-between sm:px-4 pt-8 relative">
       <div id="learnmore">
         <SectionTitle title="Some projects i have worked on" />
       </div>
-      <div className="grid grid-cols-1 gap-12 md:gap-5 md:grid-cols-3 items-start">
+      <div className="flex flex-col gap-4 sm:gap-8">
         {Projects.slice(0, 3).map((item) => {
-          return <ProjectCard key={item.id} project={item} />;
+          return (
+            <ProjectCard
+              key={item.id}
+              project={item}
+              index={Projects.indexOf(item)}
+            />
+          );
         })}
       </div>
       <div className="relative w-full mt-2">

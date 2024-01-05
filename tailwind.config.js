@@ -1,9 +1,10 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  mode: "jit",
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     fontFamily: {
       sans: ["Rubik", "system-ui", "sans"],
@@ -24,7 +25,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        bg: "#1c1410",
+        bg: "#29201b",
         "fun-gray-light": "#c0daed",
         "fun-gray": "#7b89a8",
         "fun-gray-medium": "#767c85",

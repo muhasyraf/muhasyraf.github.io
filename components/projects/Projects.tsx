@@ -10,9 +10,15 @@ type ProjectProps = {
 function ProjectsPage({ overwriteProjects }: ProjectProps) {
   const projectsList = overwriteProjects ? overwriteProjects : Projects;
   return (
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-3 items-start">
+    <div className="flex flex-col gap-4 sm:gap-8">
       {projectsList.map((item) => {
-        return <ProjectCard key={item.id} project={item} />;
+        return (
+          <ProjectCard
+            key={item.id}
+            project={item}
+            index={projectsList.indexOf(item)}
+          />
+        );
       })}
     </div>
   );

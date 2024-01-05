@@ -26,7 +26,7 @@ export const getStaticProps: GetStaticProps = async ({
     return KebabCase(project.title) === slug;
   });
   return {
-    props: JSON.parse(
+    props: await JSON.parse(
       JSON.stringify({
         filteredProjects,
         slug: slug,

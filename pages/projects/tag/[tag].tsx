@@ -34,7 +34,7 @@ export const getStaticProps: GetStaticProps = async ({
     [...KebabArray(project.tags)].includes(tag)
   );
   return {
-    props: JSON.parse(
+    props: await JSON.parse(
       JSON.stringify({
         filteredProjects,
         tag: tag,

@@ -5,6 +5,8 @@ export const KebabCase = (str: string) =>
     .replace(/[,]/g, "")
     .replace(/[']/g, "")
     .replace(/[.]/g, "")
+    .replace(/[&]/g, "and")
+    .replace(/[-]+/g, "_")
     .replace(/[\s_]+/g, "-")
     .toLowerCase();
 

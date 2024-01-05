@@ -9,7 +9,7 @@ function SkillsPage() {
         <br />
         Here are sort of my skills
         <img
-          className="sqD bottom-[-80px] left-[-50px] lg:bottom-[-50px] lg:left-[-35px] z-[-10]"
+          className="sqD bottom-[-80px] left-[-50px] lg:bottom-[-50px] lg:left-[-35px]"
           src="/static/doodles/skills/laptop.svg"
           alt="laptop"
         />

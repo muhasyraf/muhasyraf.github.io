@@ -3,66 +3,102 @@ import Image from "next/image";
 import { KebabCase } from "@/utils/utils";
 import Link from "next/link";
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, index }) {
   return (
     <div
-      className="max-w-sm mx-auto flex flex-col projects-center md:projects-start md:justify-center"
+      className={`bg-gradient-to-r ${
+        index % 2 === 0 ? "from-[#0b293d] to-bg" : "from-bg to-[#0b293d]"
+      } rounded-xl max-w-full grid max-sm:grid-flow-row max-sm:auto-rows-max sm:grid-cols-2 gap-4 py-4 sm:py-8 px-4`}
       key={project.id}
     >
       <Link
         href={`/projects/${KebabCase(project.title)}`}
-        className={`w-full relative rounded-xl border-fun-gray border p-2 transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard`}
+        className={`relative rounded-xl transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard justify-self-center`}
       >
         <img
-          className="w-full rounded-md"
+          className="w-max rounded-xl transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard"
           src={project.img}
           alt="Project Image"
         />
       </Link>
-      <div className="w-full mt-5">
-        <div className="flex projects-center justify-between">
+      <div
+        className={`justify-self-start w-full px-6 flex flex-col justify-around ${
+          index % 2 !== 0 ? "sm:order-first sm:text-end" : "sm:text-start"
+        }`}
+      >
+        <div className="w-full h-max text-center">
           <Link href={`/projects/${KebabCase(project.title)}`}>
-            <h3 className="text-lg font-bold text-fun-pink-light">
+            <h3 className="text-xl md:text-3xl font-bold text-fun-pink-light">
               {project.title}
             </h3>
           </Link>
-          <div className="space-x-2">
-            {project.link && (
-              <a href={project.link} target="_blank" rel="noreferrer">
-                <Image
-                  src="/static/icons/external-link.svg"
-                  width={16}
-                  height={16}
-                  alt="Link Icon"
-                />
-              </a>
-            )}
-            {project.github && (
-              <a href={project.github} target="_blank" rel="noreferrer">
-                <Image
-                  src="/static/icons/github.svg"
-                  width={16}
-                  height={16}
-                  alt="Github Icon"
-                />
-              </a>
-            )}
+          <p className="text-fun-pink-light text-base mt-2">{project.desc}</p>
+        </div>
+        <div
+          className={`mt-4 flex flex-col gap-1 ${
+            index % 2 !== 0 ? "sm:self-end" : "sm:self-start"
+          }`}
+        >
+          <p className="font-light text-sm text-fun-gray-light">Built with </p>
+          <ul
+            className={`flex flex-wrap items-center ${
+              index % 2 !== 0 ? "sm:justify-end" : "sm:justify-start"
+            } list-none gap-2`}
+          >
+            {project.tags.map((tag, index) => {
+              return (
+                <li key={tag}>
+                  <Link href={`/projects/tag/${KebabCase(tag)}`}>
+                    <div className="rounded-lg bg-transparent font-monospace text-fun-pink border border-1 border-fun-pink py-1 px-2 cursor-pointer text-xs hover:bg-fun-pink hover:text-bg hover:border-bg">
+                      {tag}
+                    </div>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+          <div
+            className={`flex flex-col gap-1  ${
+              index % 2 !== 0 ? "sm:items-end" : "sm:items-start"
+            }`}
+          >
+            <p className="font-light text-sm text-fun-gray-light">Source </p>
+            <div className="flex flex-row gap-1">
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-lg bg-transparent text-fun-pink border border-1 border-fun-pink py-1 px-2 cursor-pointer text-xs hover:opacity-50 flex gap-1"
+                >
+                  <p>Live site </p>
+                  <Image
+                    src="/static/icons/external-link.svg"
+                    width={16}
+                    height={16}
+                    alt="Link Icon"
+                  />
+                </a>
+              )}
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-lg bg-transparent text-fun-pink border border-1 border-fun-pink py-1 px-2 cursor-pointer text-xs hover:opacity-65 flex gap-1"
+                >
+                  <p>GitHub </p>
+                  <Image
+                    src="/static/icons/github.svg"
+                    width={16}
+                    height={16}
+                    alt="Github Icon"
+                  />
+                </a>
+              )}
+            </div>
           </div>
         </div>
-        <p className="text-fun-gray-light text-left text-sm">{project.desc}</p>
-        <ul className="flex flex-wrap items-center mt-2 -ml-2 list-none">
-          {project.tags.map((tag, index) => {
-            return (
-              <li key={tag}>
-                <Link href={`/projects/tag/${KebabCase(tag)}`}>
-                  <div className="m-1 rounded-lg text-sm bg-fun-pink text-bg py-1 px-2 cursor-pointer hover:opacity-75">
-                    {tag}
-                  </div>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
       </div>
     </div>
   );

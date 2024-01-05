@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function FooterPage() {
   return (
-    <footer className="flex flex-col w-screen px-5 py-10 border-t border-fun-pink-darker z-5 bg-bg">
+    <footer className="flex flex-col w-screen px-5 py-10 border-t border-fun-pink-darker z-20 bg-bg">
       <div className="w-full max-w-4xl m-auto grid grid-cols-2 sm:grid-cols-3 justify-between items-start">
         {Footer.columns.map((item, index) => {
           return (
