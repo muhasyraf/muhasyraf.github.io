@@ -23,8 +23,8 @@ function ProjectsPage() {
       </div>
       <div className="relative w-full mt-2">
         <Link href="/projects">
-          <div className="mt-8 max-w-sm md:max-w-2xl border border-fun-pink mx-auto text-center w-full whitespace-nowrap px-8 py-3 rounded-full text-fun-pink bg-fun-pink-darkerer hover:bg-fun-pink hover:text-white transition-colors cursor-pointer">
-            View More
+          <div className="mt-8 max-w-sm md:max-w-2xl text-fun-pink-light font-bold border-2 rounded-full border-fun-pink bg-transparent hover:bg-fun-pink hover:border-collapse hover:text-bg mx-auto text-center w-full whitespace-nowrap px-8 py-3 bg-fun-pink-darkerer transition-colors cursor-pointer">
+            See more of my projects!
           </div>
         </Link>
       </div>

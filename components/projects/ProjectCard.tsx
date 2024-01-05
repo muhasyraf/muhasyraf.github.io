@@ -6,9 +6,11 @@ import Link from "next/link";
 function ProjectCard({ project, index }) {
   return (
     <div
-      className={`bg-gradient-to-r ${
-        index % 2 === 0 ? "from-[#0b293d] to-bg" : "from-bg to-[#0b293d]"
-      } rounded-xl max-w-full grid max-sm:grid-flow-row max-sm:auto-rows-max sm:grid-cols-2 gap-4 py-4 sm:py-8 px-4`}
+      className={`${
+        index % 2 === 0
+          ? "sm:bg-gradient-to-r sm:from-[#173041b6]"
+          : "sm:bg-gradient-to-l sm:from-[#173041b6]"
+      } bg-gradient-to-b from-[#173041b6] rounded-xl max-w-full grid max-sm:grid-flow-row max-sm:auto-rows-max sm:grid-cols-2 gap-4 py-4 sm:py-8 px-4`}
       key={project.id}
     >
       <Link

@@ -7,8 +7,14 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
+  background-image: linear-gradient(#3e737c1b 0.5px, transparent 0.5px), linear-gradient(to right, #3e737c1b 0.5px, transparent 0.5px);
+  background-size: 45px 45px;
   @apply bg-bg;
 }
+
+/* background-image: linear-gradient(#3e737c 0.5px, transparent 0.5px), linear-gradient(to right, #3e737c 0.5px, transparent 0.5px);
+background-size: 45px 45px;
+background-color: #29201b; */
 
 body::-webkit-scrollbar {
   width: 8px;
@@ -126,6 +132,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 80px;
   @apply text-fun-pink;
 }
+
 
 /* BLOG */
 

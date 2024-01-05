@@ -9,27 +9,29 @@ const BlogData = Blogs.sort((a, b) => {
 
 function BlogsPage() {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-3">
       {BlogData.map((item, index) => {
         return (
-          <div className="flex flex-col gap-1 text-start" key={index}>
-            <Link href={`/blogs/${KebabCase(item.title)}`} className="w-full">
+          <Link href={`/blogs/${KebabCase(item.title)}`}>
+            <div
+              className="flex flex-col gap-1 text-start bg-gradient-to-r from-[#1730415b] hover:bg-[#17304197] rounded-xl p-4"
+              key={index}
+            >
               <h1 className="text-2xl sm:text-4xl font-bold text-fun-pink-light italic">
                 {item.title}
               </h1>
-            </Link>
-            <p className="text-sm text-fun-pink">
-              {item.date.toLocaleDateString(undefined, {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </p>
-            <p className="text-base sm:text-lg text-fun-gray-light max line-clamp-2">
-              {item.body[0].content}
-            </p>
-            <div className="divider"></div>
-          </div>
+              <p className="text-sm text-fun-pink">
+                {item.date.toLocaleDateString(undefined, {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </p>
+              <p className="text-base sm:text-lg text-fun-gray-light max line-clamp-2">
+                {item.body[0].content}
+              </p>
+            </div>
+          </Link>
         );
       })}
       <Link href={`/`}>Back to home</Link>
