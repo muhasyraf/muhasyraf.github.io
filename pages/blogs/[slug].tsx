@@ -45,7 +45,7 @@ const PostPage = ({ filteredBlogs, slug }) => {
       }}
     >
       <Heading title={filteredBlogs[0].title} />
-      <div className="flex flex-col items-start px-5 pb-5 gap-1">
+      <div className="flex flex-col items-start px-2 md:px-5 pb-5 gap-1">
         {filteredBlogs[0].img && (
           <img
             src={filteredBlogs[0].img}
@@ -75,7 +75,7 @@ const PostPage = ({ filteredBlogs, slug }) => {
                 <h1 className="text-2xl sm:text-4xl font-medium text-fun-pink-light">
                   #<span className="font-bold italic">{section.title}</span>
                 </h1>
-                <p className="mt-2 text-base sm:text-lg font-normal text-fun-gray-light px-5">
+                <p className="mt-2 text-base sm:text-lg font-normal text-fun-gray-light">
                   {section.content}
                 </p>
               </div>
