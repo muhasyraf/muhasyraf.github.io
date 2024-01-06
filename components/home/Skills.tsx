@@ -3,11 +3,11 @@ import { Skills } from "@/data/content/home";
 
 function SkillsPage() {
   return (
-    <div className="flex flex-col md:px-8 md:py-4 md:flex-row bg-[#17304185] rounded-xl justify-between relative">
-      <h2 className="text-2xl md:text-3xl w-full text-center md:self-center md:text-left font-bold md:max-w-lg mb-10 md:mr-10 md:mb-0 md:w-max mr-0 ">
+    <div className="flex flex-col px-4 md:px-8 py-4 md:flex-row bg-[#17304185] rounded-xl justify-between relative">
+      <h2 className="text-2xl md:text-3xl w-full text-center md:self-center md:text-left font-bold md:max-w-lg mb-10 md:mr-10 md:mb-0 md:w-max mr-0 text-fun-pink-light">
         Some tools i've been working with
       </h2>
-      <div className="max-w-lg w-full mx-auto md:mx-none grid gap-x-8 gap-y-12 sm:gap-4 md:gap-6 grid-cols-3 sm:grid-cols-6 items-center place-content-center">
+      <div className="max-w-lg w-full mx-auto md:mx-none grid gap-x-4 gap-y-8 sm:gap-4 md:gap-6 grid-cols-3 sm:grid-cols-6 items-center place-content-center">
         {Skills.map((item, index) => {
           return (
             <div

@@ -10,7 +10,7 @@ function ProjectCard({ project, index }) {
         index % 2 === 0
           ? "sm:bg-gradient-to-r sm:from-[#173041b6]"
           : "sm:bg-gradient-to-l sm:from-[#173041b6]"
-      } bg-gradient-to-b from-[#173041b6] rounded-xl max-w-full grid max-sm:grid-flow-row max-sm:auto-rows-max sm:grid-cols-2 gap-4 py-4 sm:py-8 px-4`}
+      } bg-gradient-to-t from-[#173041b6] rounded-xl max-w-full grid max-sm:grid-flow-row max-sm:auto-rows-max sm:grid-cols-2 gap-4 py-4 sm:py-8 px-4`}
       key={project.id}
     >
       <Link
@@ -24,17 +24,19 @@ function ProjectCard({ project, index }) {
         />
       </Link>
       <div
-        className={`justify-self-start w-full px-6 flex flex-col justify-around ${
+        className={`justify-self-start w-full px-2 sm:px-6 flex flex-col justify-around ${
           index % 2 !== 0 ? "sm:order-first sm:text-end" : "sm:text-start"
         }`}
       >
-        <div className="w-full h-max text-center">
+        <div className="w-full h-max">
           <Link href={`/projects/${KebabCase(project.title)}`}>
-            <h3 className="text-xl md:text-3xl font-bold text-fun-pink-light">
+            <h3 className="text-xl md:text-3xl font-bold text-fun-pink-light text-center">
               {project.title}
             </h3>
           </Link>
-          <p className="text-fun-pink-light text-base mt-2">{project.desc}</p>
+          <p className="text-fun-gray-light text-base mt-2 text-justify sm:text-center">
+            {project.desc}
+          </p>
         </div>
         <div
           className={`mt-4 flex flex-col gap-1 ${

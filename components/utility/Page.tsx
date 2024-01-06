@@ -13,10 +13,7 @@ function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
   }`;
   console.log(currentPage);
   return (
-    <div
-      className="w-full m-auto flex flex-col items-center justify-center min-h-screen opening-box-animate-paddin text-white overflow-hidden md:overflow-visible"
-      style={{ maxWidth: "1200px" }}
-    >
+    <div className="w-full m-auto flex flex-col items-center justify-center min-h-screen opening-box-animate-paddin text-white overflow-hidden md:overflow-visible">
       <Head>
         <title>{pageTitle}</title>
 
@@ -90,14 +87,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
         }}
       ></noscript>
+      <div className="hidden sm:block z-50 sticky top-0 left-0 right-0 w-full">
+        <Navbar currentPage={currentPage} />
+      </div>
       <main className="p-5 w-full flex-1 text-center">
-        <div className="hidden sm:block z-100">
-          <Navbar currentPage={currentPage} />
-        </div>
         <div className="-m-5 block sm:hidden z-100">
           <MobileNavbar />
         </div>
-        {children}
+        <div className="max-sm:pt-20">{children}</div>
       </main>
       <Footer />
     </div>

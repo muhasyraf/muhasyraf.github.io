@@ -7,7 +7,7 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-  background-image: linear-gradient(#3e737c1b 0.5px, transparent 0.5px), linear-gradient(to right, #3e737c1b 0.5px, transparent 0.5px);
+  background-image: linear-gradient(#3e737c2d 0.5px, transparent 0.5px), linear-gradient(to right, #3e737c2d 0.5px, transparent 0.5px);
   background-size: 45px 45px;
   @apply bg-bg;
 }
@@ -133,6 +133,9 @@ body::-webkit-scrollbar-thumb {
   @apply text-fun-pink;
 }
 
+.custom-divider-blog {
+  @apply border-b-[1] border-fun-pink;
+}
 
 /* BLOG */
 

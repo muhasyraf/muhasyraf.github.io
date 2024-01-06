@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function FooterPage() {
   return (
-    <footer className="flex flex-col w-screen px-5 py-10 border-t border-fun-pink-darker z-20 bg-bg">
+    <footer className="flex flex-col w-screen px-5 pt-5 pb-8 border-t-2 border-fun-pink-darker z-20 bg-bg">
       <div className="w-full max-w-4xl m-auto grid grid-cols-2">
         {Footer.columns.map((item, index) => {
           return (
@@ -46,7 +46,7 @@ function FooterPage() {
           );
         })}
       </div>
-      <div className="max-w-4xl w-full m-auto mt-8 pt-8 sm:mt-4 sm:pt-4 text-center text-fun-gray border-t border-fun-pink-dark">
+      <div className="max-w-full w-full m-auto mt-8 pt-8 sm:mt-4 sm:pt-4 text-center text-fun-gray border-t border-fun-pink-dark">
         <div className="flex flex-col items-center justify-center ">
           <div className="inline-flex items-center uppercase text-xs font-bold tracking-widest">
             Made with{" "}
@@ -89,22 +89,6 @@ function FooterPage() {
             . All rights reserved.
           </div>
         </div>
-      </div>
-      <div className="mt-8 text-center sm:text-right sm:-mt-12">
-        <a
-          className="w-auto inline-flex items-center sm:w-auto font-bold flex-shrink text-xs border border-fun-pink px-4 py-2 rounded-xl text-fun-pink cursor-pointer opacity-50"
-          href="https://github.com/muhasyraf/muhasyraf.github.io"
-          target="_blank"
-          rel="noopener nooreferrer"
-        >
-          <Image
-            src="/static/icons/github.svg"
-            width={16}
-            height={16}
-            alt="Github Icon"
-          />
-          <span className="ml-2">View Source Code </span>
-        </a>
       </div>
     </footer>
   );

@@ -4,14 +4,14 @@ import { Routes } from "@/data/global";
 
 function Navbar({ currentPage }) {
   return (
-    <nav className="flex items-center justify-between">
-      <ul>
+    <nav className="flex items-center justify-between z-100 px-4 py-2 bg-[#1b2c38] rounded-b-3xl">
+      <ul className="">
         <li className="list-none font-bold text-lg cursor-pointer">
           <Link href="/">
             <span className="font-black text-xl flex items-center">
               <img
                 className="mr-2 transform hover:rotate-360 hover:scale-75 transition-transform duration-500 rounded-full"
-                src="/static/img/linkedinprofilecrop.png"
+                src="/static/img/linkedinprofilecropcomp.png"
                 width="45"
                 alt="Asyraf's Profile Picture"
               />

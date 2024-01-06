@@ -31,18 +31,17 @@ export default function MobileNavbar() {
   }, []);
 
   return (
-    <nav>
+    <nav className="fixed top-0 w-full z-50 bg-[#1b2c38] rounded-b-3xl">
       <div
         className={`w-full justify-between flex items-center ${
           isMenuRendered && "bg-bg"
-        } p-5`}
-        style={{ zIndex: 101 }}
+        } py-2 px-4`}
       >
         <li className="list-none font-bold text-lg">
           <Link href="/">
             <img
               className="mr-3 rounded-full"
-              src="/static/img/linkedinprofilecrop.png"
+              src="/static/img/linkedinprofilecropcomp.png"
               width="65"
               alt="Asyraf's Profile Picture"
             />
