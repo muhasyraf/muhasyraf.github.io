@@ -8,7 +8,7 @@ import React, { ReactChildren } from "react";
 function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
   const pageTitle = `${
     currentPage === "Home"
-      ? "Asyraf - Full-stack Developer."
+      ? "Asyraf - Full-stack Developer"
       : `${currentPage} - muhasyraf.github.io`
   }`;
   console.log(currentPage);
@@ -16,7 +16,6 @@ function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
     <div className="w-full m-auto flex flex-col items-center justify-center min-h-screen opening-box-animate-paddin text-white overflow-hidden md:overflow-visible">
       <Head>
         <title>{pageTitle}</title>
-
         <link
           rel="apple-touch-icon"
           sizes="180x180"

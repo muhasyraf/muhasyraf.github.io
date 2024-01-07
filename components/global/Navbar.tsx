@@ -34,10 +34,10 @@ function Navbar({ currentPage }) {
           return (
             <li
               key={index}
-              className={`list-none text-white ${
+              className={`list-none text-fun-pink-light ${
                 currentPage === item.title
-                  ? "opacity-100"
-                  : "opacity-40 hover:opacity-100 transition-opacity"
+                  ? "opacity-100 font-bold"
+                  : "opacity-40 hover:opacity-100 hover:underline transition-opacity font-normal"
               }`}
             >
               <Link href={item.path}>{item.title}</Link>

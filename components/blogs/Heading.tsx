@@ -11,7 +11,11 @@ function Heading({ title }: HeadingProps) {
         title ? "pb-4 sm:pb-8" : "pb-10 sm:pb-16"
       } w-full text-center relative`}
     >
-      <h1 className="text-3xl sm:text-5xl inline-block w-auto mb-4 relative font-bold text-fun-pink">
+      <h1
+        className={`text-2xl sm:text-5xl inline-block w-auto mb-4 relative font-bold text-fun-pink ${
+          title ? "px-2 sm:px-8" : ""
+        }`}
+      >
         {title ? title : "Blogs"}
       </h1>
       {!title && (

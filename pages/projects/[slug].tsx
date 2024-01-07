@@ -45,19 +45,28 @@ function PostPage({ filteredProjects, slug }) {
       }}
     >
       <Heading title={filteredProjects[0].title} />
-      <div className="flex flex-col px-10 pb-5">
+      <div className="flex flex-col px-2 md:px-10 pb-5 gap-1">
         <img
           src={filteredProjects[0].img}
           alt=""
-          className="w-full rounded-md"
+          className="w-1/2 self-center rounded-md"
         />
-        <div className="flex flex-row justify-between">
-          <ul className="flex flex-wrap items-center mt-2 -ml-2 list-none">
+        <div className="text-start mt-3">
+          <h1 className="text-xl sm:text-3xl font-medium text-fun-pink-light italic">
+            Project Description
+          </h1>
+          <p className="text-base sm:text-lg font-normal text-fun-gray-light">
+            {filteredProjects[0].desc}
+          </p>
+        </div>
+        <div className="flex flex-col gap-2 py-4 text-start">
+          <p className="font-light text-sm text-fun-gray-light">Built with</p>
+          <ul className="flex flex-wrap items-center list-none gap-2">
             {filteredProjects[0].tags.map((tag, index) => {
               return (
                 <li key={tag}>
                   <Link href={`/projects/tag/${KebabCase(tag)}`}>
-                    <div className="m-1 rounded-lg text-sm bg-fun-pink text-bg py-1 px-2 cursor-pointer hover:opacity-75">
+                    <div className="rounded-lg bg-transparent font-monospace text-fun-pink border border-1 border-fun-pink py-1 px-2 cursor-pointer text-xs hover:bg-fun-pink hover:text-bg hover:border-bg">
                       {tag}
                     </div>
                   </Link>
@@ -65,24 +74,42 @@ function PostPage({ filteredProjects, slug }) {
               );
             })}
           </ul>
-          <div className="mt-2">
-            <a
-              className="w-auto inline-flex items-center sm:w-auto font-bold flex-shrink text-xs border border-fun-pink px-4 py-2 rounded-xl text-fun-pink cursor-pointer opacity-50"
-              href={filteredProjects[0].github}
-              target="_blank"
-              rel="nooreferrer"
-            >
-              <Image
-                src="/static/icons/github.svg"
-                width={16}
-                height={16}
-                alt="Github Icon"
-              />
-              <span className="ml-2">View Source Code </span>
-            </a>
+          <p className="font-light text-sm text-fun-gray-light">Source</p>
+          <div className="flex flex-row gap-1 w-max">
+            {filteredProjects[0].link && (
+              <a
+                href={filteredProjects[0].link}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-lg bg-transparent text-fun-pink border border-1 border-fun-pink py-1 px-2 cursor-pointer text-xs hover:opacity-50 flex gap-1"
+              >
+                <p>Live site </p>
+                <Image
+                  src="/static/icons/external-link.svg"
+                  width={16}
+                  height={16}
+                  alt="Link Icon"
+                />
+              </a>
+            )}
+            {filteredProjects[0].github && (
+              <a
+                href={filteredProjects[0].github}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-lg bg-transparent text-fun-pink border border-1 border-fun-pink py-1 px-2 cursor-pointer text-xs hover:opacity-65 flex gap-1"
+              >
+                <p>GitHub </p>
+                <Image
+                  src="/static/icons/github.svg"
+                  width={16}
+                  height={16}
+                  alt="Github Icon"
+                />
+              </a>
+            )}
           </div>
         </div>
-        <p className="text-start mt-3">{filteredProjects[0].desc}</p>
       </div>
       <Link href="/projects">
         <div className="text-fun-gray-light hover:underline mt-5 block">

@@ -10,7 +10,7 @@ function CTA() {
         <a
           href="mailto:faizkamil39@gmail.com"
           className="cursor-pointer font-bold whitespace-nowrap 
-        mt-6 px-8 py-3 text-fun-pink-light border-2 rounded-full border-fun-pink bg-transparent hover:bg-fun-pink hover:border-collapse hover:text-bg transition-colors"
+        mt-6 px-8 py-3 text-fun-pink-light border-2 rounded-3xl border-fun-pink bg-transparent hover:bg-fun-pink hover:border-collapse hover:text-bg transition-colors"
         >
           Keep in touch!
         </a>

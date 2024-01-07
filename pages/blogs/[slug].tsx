@@ -45,7 +45,7 @@ const PostPage = ({ filteredBlogs, slug }) => {
       }}
     >
       <Heading title={filteredBlogs[0].title} />
-      <div className="flex flex-col items-start px-2 md:px-10 pb-5 gap-1">
+      <div className="flex flex-col items-start md:px-10 pb-5 gap-1">
         {filteredBlogs[0].img && (
           <img
             src={filteredBlogs[0].img}
@@ -53,7 +53,7 @@ const PostPage = ({ filteredBlogs, slug }) => {
             className="w-1/3 rounded-md self-center"
           />
         )}
-        <div className="mt-2 text-xs sm:text-sm font-light text-fun-gray-light flex flex-col items-start gap-1 w-full">
+        <div className="mt-2 px-3 sm:px-6 text-xs sm:text-sm font-light text-fun-gray-light flex flex-col items-start gap-1 w-full">
           <p>
             Posted at{" "}
             {new Date(filteredBlogs[0].date).toLocaleDateString(undefined, {
@@ -66,9 +66,8 @@ const PostPage = ({ filteredBlogs, slug }) => {
             by Muhammad{" "}
             <span className="text-fun-pink font-medium">Asyraf</span> Faiz Kamil
           </p>
-          <hr className="custom-divider-blog w-full" />
         </div>
-        <article className="mt-3 flex flex-col gap-5 w-full">
+        <article className="p-3 sm:p-6 flex flex-col gap-5 w-full bg-gradient-to-b rounded-xl from-transparent via-[#1730417e]">
           {filteredBlogs[0].body.map((section, index) => {
             return (
               <div key={index} className="text-start">

@@ -24,7 +24,7 @@ function ProjectCard({ project, index }) {
         />
       </Link>
       <div
-        className={`justify-self-start w-full px-2 sm:px-6 flex flex-col justify-around ${
+        className={`justify-self-start w-full px-2 sm:px-6 flex flex-col justify-around gap-2 sm:gap-6 ${
           index % 2 !== 0 ? "sm:order-first sm:text-end" : "sm:text-start"
         }`}
       >
@@ -39,7 +39,7 @@ function ProjectCard({ project, index }) {
           </p>
         </div>
         <div
-          className={`mt-4 flex flex-col gap-1 ${
+          className={`flex flex-col gap-1 w-full max-sm:mt-2 ${
             index % 2 !== 0 ? "sm:self-end" : "sm:self-start"
           }`}
         >
@@ -67,39 +67,69 @@ function ProjectCard({ project, index }) {
             }`}
           >
             <p className="font-light text-sm text-fun-gray-light">Source </p>
-            <div className="flex flex-row gap-1">
-              {project.link && (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-lg bg-transparent text-fun-pink border border-1 border-fun-pink py-1 px-2 cursor-pointer text-xs hover:opacity-50 flex gap-1"
+            <div className="flex justify-between items-center w-full">
+              <div
+                className={`flex flex-row gap-1 ${
+                  index % 2 !== 0 ? "sm:order-last" : "sm:order-first"
+                }`}
+              >
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-lg bg-transparent text-fun-pink border border-1 border-fun-pink py-1 px-2 cursor-pointer text-xs hover:opacity-50 flex gap-1"
+                  >
+                    <p>Live site </p>
+                    <Image
+                      src="/static/icons/external-link.svg"
+                      width={16}
+                      height={16}
+                      alt="Link Icon"
+                    />
+                  </a>
+                )}
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-lg bg-transparent text-fun-pink border border-1 border-fun-pink py-1 px-2 cursor-pointer text-xs hover:opacity-65 flex gap-1"
+                  >
+                    <p>GitHub </p>
+                    <Image
+                      src="/static/icons/github.svg"
+                      width={16}
+                      height={16}
+                      alt="Github Icon"
+                    />
+                  </a>
+                )}
+              </div>
+              <Link href={`/projects/${KebabCase(project.title)}`}>
+                <div
+                  className={` text-fun-gray cursor-pointer text-xs hover:text-fun-pink flex gap-1`}
                 >
-                  <p>Live site </p>
-                  <Image
-                    src="/static/icons/external-link.svg"
-                    width={16}
-                    height={16}
-                    alt="Link Icon"
-                  />
-                </a>
-              )}
-              {project.github && (
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-lg bg-transparent text-fun-pink border border-1 border-fun-pink py-1 px-2 cursor-pointer text-xs hover:opacity-65 flex gap-1"
-                >
-                  <p>GitHub </p>
-                  <Image
-                    src="/static/icons/github.svg"
-                    width={16}
-                    height={16}
-                    alt="Github Icon"
-                  />
-                </a>
-              )}
+                  <p
+                    className={`${
+                      index % 2 !== 0 ? "sm:order-last" : "sm:order-first"
+                    }`}
+                  >
+                    More details
+                  </p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="15"
+                    width="15"
+                    viewBox="0 0 512 512"
+                    className={`fill-current ${
+                      index % 2 !== 0 ? "sm:rotate-180" : ""
+                    }`}
+                  >
+                    <path d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z" />
+                  </svg>
+                </div>
+              </Link>
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function FooterPage() {
   return (
-    <footer className="flex flex-col w-screen px-5 pt-5 pb-8 border-t-2 border-fun-gray-darker z-20 bg-bg">
+    <footer className="flex flex-col w-screen px-5 pt-5 pb-8 border-t-2 border-fun-gray-darker z-20 bg-gradient-to-b from-[#1b2c38cf] via-[#1b2c382d] to-[#1b2c38cf]">
       <div className="w-full max-w-4xl m-auto grid grid-cols-2">
         {Footer.columns.map((item, index) => {
           return (
@@ -16,7 +16,7 @@ function FooterPage() {
               <div className="flex flex-col items-center">
                 {item.links.map((item, index) => {
                   return (
-                    <div key={index} className="my-4 w-max">
+                    <div key={index} className="my-2 w-max">
                       {item.leavesWebsite ? (
                         <a
                           href={item.link}
