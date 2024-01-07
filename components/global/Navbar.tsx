@@ -12,7 +12,7 @@ function Navbar({ currentPage }) {
               <img
                 className="mr-2 transform hover:rotate-360 hover:scale-75 transition-transform duration-500 rounded-full"
                 src="/static/img/linkedinprofilecropcomp.png"
-                width="45"
+                width="40"
                 alt="Asyraf's Profile Picture"
               />
               {"Asyraf".split("").map((letter, index) => {

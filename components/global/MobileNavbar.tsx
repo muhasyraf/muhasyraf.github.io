@@ -42,7 +42,7 @@ export default function MobileNavbar() {
             <img
               className="mr-3 rounded-full"
               src="/static/img/linkedinprofilecropcomp.png"
-              width="65"
+              width="50"
               alt="Asyraf's Profile Picture"
             />
           </Link>

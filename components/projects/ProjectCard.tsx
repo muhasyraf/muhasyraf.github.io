@@ -8,8 +8,8 @@ function ProjectCard({ project, index }) {
     <div
       className={`${
         index % 2 === 0
-          ? "sm:bg-gradient-to-r sm:from-[#173041b6]"
-          : "sm:bg-gradient-to-l sm:from-[#173041b6]"
+          ? "sm:bg-gradient-to-l sm:from-[#173041b6]"
+          : "sm:bg-gradient-to-r sm:from-[#173041b6]"
       } bg-gradient-to-t from-[#173041b6] rounded-xl max-w-full grid max-sm:grid-flow-row max-sm:auto-rows-max sm:grid-cols-2 gap-4 py-4 sm:py-8 px-4`}
       key={project.id}
     >

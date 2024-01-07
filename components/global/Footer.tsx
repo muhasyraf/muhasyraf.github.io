@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function FooterPage() {
   return (
-    <footer className="flex flex-col w-screen px-5 pt-5 pb-8 border-t-2 border-fun-pink-darker z-20 bg-bg">
+    <footer className="flex flex-col w-screen px-5 pt-5 pb-8 border-t-2 border-fun-gray-darker z-20 bg-bg">
       <div className="w-full max-w-4xl m-auto grid grid-cols-2">
         {Footer.columns.map((item, index) => {
           return (
@@ -13,10 +13,10 @@ function FooterPage() {
               <h4 className="uppercase text-fun-gray text-sm font-bold">
                 {item.title}
               </h4>
-              <div>
+              <div className="flex flex-col items-center">
                 {item.links.map((item, index) => {
                   return (
-                    <div key={index} className="my-4">
+                    <div key={index} className="my-4 w-max">
                       {item.leavesWebsite ? (
                         <a
                           href={item.link}
@@ -46,7 +46,7 @@ function FooterPage() {
           );
         })}
       </div>
-      <div className="max-w-full w-full m-auto mt-8 pt-8 sm:mt-4 sm:pt-4 text-center text-fun-gray border-t border-fun-pink-dark">
+      <div className="max-w-full w-full m-auto mt-4 pt-4 sm:mt-2 sm:pt-2 text-center text-fun-gray">
         <div className="flex flex-col items-center justify-center ">
           <div className="inline-flex items-center uppercase text-xs font-bold tracking-widest">
             Made with{" "}

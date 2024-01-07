@@ -53,7 +53,7 @@ const PostPage = ({ filteredBlogs, slug }) => {
             className="w-1/3 rounded-md self-center"
           />
         )}
-        <div className="mt-2 text-sm font-light text-fun-gray-light flex flex-col items-start gap-1 w-full">
+        <div className="mt-2 text-xs sm:text-sm font-light text-fun-gray-light flex flex-col items-start gap-1 w-full">
           <p>
             Posted at{" "}
             {new Date(filteredBlogs[0].date).toLocaleDateString(undefined, {
@@ -82,7 +82,6 @@ const PostPage = ({ filteredBlogs, slug }) => {
             );
           })}
         </article>
-        <hr className="custom-divider-blog w-full mt-2" />
         <Link href={`/blogs`} className="mt-8 self-center">
           <div className="text-fun-gray-light hover:underline">
             Back to all posts
