@@ -1,14 +1,14 @@
 import React from "react";
 import SectionTitle from "../global/SectionTitle";
-import { Blogs } from "@/data/content/blogs";
+import { Blog } from "@/data/content/blog";
 import Link from "next/link";
 import { KebabCase } from "@/utils/utils";
 
-const BlogData = Blogs.sort((a, b) => {
+const BlogData = Blog.sort((a, b) => {
   return new Date(b.date).getTime() - new Date(a.date).getTime();
 });
 
-function BlogsPage() {
+function BlogPage() {
   return (
     <div className="flex flex-col text-left max-w-md md:max-w-full w-full m-auto">
       <SectionTitle title="Here are My Latest Posts!" />
@@ -19,7 +19,7 @@ function BlogsPage() {
               key={index}
               className={`bg-gradient-to-br from-[#173041b4] via-transparent to-[#173041b4] p-4 rounded-xl h-full flex flex-col justify-between`}
             >
-              <Link href={`/blogs/${KebabCase(item.title)}`}>
+              <Link href={`/blog/${KebabCase(item.title)}`}>
                 <h2 className="font-bold text-xl text-fun-pink">
                   {item.title}
                 </h2>
@@ -33,7 +33,7 @@ function BlogsPage() {
                   })}
                 </p>
                 <Link
-                  href={`/blogs/${KebabCase(item.title)}`}
+                  href={`/blog/${KebabCase(item.title)}`}
                   className="self-end"
                 >
                   <div
@@ -60,4 +60,4 @@ function BlogsPage() {
   );
 }
 
-export default BlogsPage;
+export default BlogPage;

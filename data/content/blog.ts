@@ -10,7 +10,7 @@ type Blog = {
   }[];
 };
 
-const Blogs: Blog[] = [
+const Blog: Blog[] = [
   {
     title: "Hello, World! Welcome to My Personal Website!",
     date: new Date("2024-01-07"),
@@ -25,7 +25,7 @@ const Blogs: Blog[] = [
       },
       {
         title: "What Is the Content of My Personal Website?",
-        content: `On this website, you will find two main sections: projects and blogs. In the projects section, you will see some of the projects that I have created or contributed to, in the blogs section, you will read some of my writings about various things.`,
+        content: `On this website, you will find two main sections: projects and blog. In the projects section, you will see some of the projects that I have created or contributed to, in the blog section, you will read some of my writings about various things.`,
       },
       {
         title: "How Did I Create My Personal Website?",
@@ -39,8 +39,8 @@ const Blogs: Blog[] = [
   },
 ];
 
-const AllKebabTitles = Blogs.map((blog) => {
+const AllKebabTitles = Blog.map((blog) => {
   return KebabCase(blog.title);
 });
 
-export { Blogs, AllKebabTitles };
+export { Blog, AllKebabTitles };

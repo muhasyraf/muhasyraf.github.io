@@ -16,7 +16,7 @@ function Heading({ title }: HeadingProps) {
           title ? "px-2 sm:px-8" : ""
         }`}
       >
-        {title ? title : "Blogs"}
+        {title ? title : "Blog"}
       </h1>
       {!title && (
         <p className="text-fun-gray-light text-xl">

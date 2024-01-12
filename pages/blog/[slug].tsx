@@ -1,8 +1,8 @@
 import Page from "components/utility/Page";
 import { GetStaticProps, GetStaticPaths } from "next";
-import { AllKebabTitles, Blogs } from "@/data/content/blogs";
+import { AllKebabTitles, Blog } from "@/data/content/blog";
 import { KebabCase } from "@/utils/utils";
-import Heading from "components/blogs/Heading";
+import Heading from "components/blog/Heading";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -22,33 +22,33 @@ export const getStaticProps: GetStaticProps = async ({
   params: { slug: string };
 }) => {
   const slug = params.slug;
-  const filteredBlogs = Blogs.filter((blog) => {
+  const filteredBlog = Blog.filter((blog) => {
     return KebabCase(blog.title) === slug;
   });
   return {
     props: await JSON.parse(
       JSON.stringify({
-        filteredBlogs,
+        filteredBlog,
         slug: slug,
       })
     ),
   };
 };
 
-const PostPage = ({ filteredBlogs, slug }) => {
+const PostPage = ({ filteredBlog, slug }) => {
   return (
     <Page
-      currentPage="Blogs"
+      currentPage="Blog"
       meta={{
-        title: `${filteredBlogs[0].title}`,
-        desc: `${filteredBlogs[0].body[0].content}`,
+        title: `${filteredBlog[0].title}`,
+        desc: `${filteredBlog[0].body[0].content}`,
       }}
     >
-      <Heading title={filteredBlogs[0].title} />
+      <Heading title={filteredBlog[0].title} />
       <div className="flex flex-col items-start md:px-10 pb-5 gap-1">
-        {filteredBlogs[0].img && (
+        {filteredBlog[0].img && (
           <img
-            src={filteredBlogs[0].img}
+            src={filteredBlog[0].img}
             alt=""
             className="w-1/3 rounded-md self-center"
           />
@@ -56,7 +56,7 @@ const PostPage = ({ filteredBlogs, slug }) => {
         <div className="mt-2 px-3 sm:px-6 text-xs sm:text-sm font-light text-fun-gray-light flex flex-col items-start gap-1 w-full">
           <p>
             Posted at{" "}
-            {new Date(filteredBlogs[0].date).toLocaleDateString(undefined, {
+            {new Date(filteredBlog[0].date).toLocaleDateString(undefined, {
               year: "numeric",
               month: "long",
               day: "numeric",
@@ -68,7 +68,7 @@ const PostPage = ({ filteredBlogs, slug }) => {
           </p>
         </div>
         <article className="p-3 sm:p-6 flex flex-col gap-5 w-full bg-gradient-to-b rounded-xl from-transparent via-[#1730417e]">
-          {filteredBlogs[0].body.map((section, index) => {
+          {filteredBlog[0].body.map((section, index) => {
             return (
               <div key={index} className="text-start">
                 <h1 className="text-xl sm:text-3xl font-medium text-fun-pink-light">
@@ -81,7 +81,7 @@ const PostPage = ({ filteredBlogs, slug }) => {
             );
           })}
         </article>
-        <Link href={`/blogs`} className="mt-8 self-center">
+        <Link href={`/blog`} className="mt-8 self-center">
           <div className="text-fun-gray-light hover:underline">
             Back to all posts
           </div>
