@@ -1,20 +1,9 @@
 import CTA from "@/components/home/CTA";
 import Hero from "@/components/home/Hero";
 import Page from "@/components/utility/Page";
-// import Posts from "@/components/home/Posts";
 import Projects from "@/components/home/Projects";
 import Skills from "@/components/home/Skills";
-import Blogs from "@/components/home/Blogs";
-// import { allPosts } from "contentlayer/generated";
-// import { GetStaticProps } from "next";
-
-// export const getStaticProps: GetStaticProps = async () => {
-//   return {
-//     props: {
-//       allPosts: allPosts.sort(({date: dateA}: any, {date: dateB}: any) => dateB - dateA),
-//     },
-//   };
-// }
+import Blog from "@/components/home/Blog";
 
 export default function Home() {
   return (
@@ -26,7 +15,7 @@ export default function Home() {
       <div className="mt-20 space-y-32">
         <Projects />
         <Skills />
-        <Blogs />
+        <Blog />
         {/* <Posts allPosts={allPosts} /> */}
       </div>
       <CTA />

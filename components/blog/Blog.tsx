@@ -1,13 +1,13 @@
 import React from "react";
 import Link from "next/link";
-import { Blogs } from "@/data/content/blogs";
+import { Blog } from "@/data/content/blog";
 import { KebabCase } from "@/utils/utils";
 
-const BlogData = Blogs.sort((a, b) => {
+const BlogData = Blog.sort((a, b) => {
   return new Date(b.date).getTime() - new Date(a.date).getTime();
 });
 
-function BlogsPage() {
+function BlogPage() {
   return (
     <div className="flex flex-col gap-3">
       {BlogData.map((item, index) => {
@@ -16,7 +16,7 @@ function BlogsPage() {
             className="flex flex-col gap-1 text-start bg-gradient-to-br from-[#1730415b] via-transparent to-[#1730415b] rounded-xl p-4"
             key={index}
           >
-            <Link href={`/blogs/${KebabCase(item.title)}`}>
+            <Link href={`/blog/${KebabCase(item.title)}`}>
               <h1 className="text-2xl sm:text-4xl font-bold text-fun-pink-light italic">
                 {item.title}
               </h1>
@@ -31,7 +31,7 @@ function BlogsPage() {
             <p className="text-sm sm:text-lg text-fun-gray-light max line-clamp-2">
               {item.body[0].content}
             </p>
-            <Link href={`/blogs/${KebabCase(item.title)}`} className="self-end">
+            <Link href={`/blog/${KebabCase(item.title)}`} className="self-end">
               <div
                 className={` text-fun-gray cursor-pointer text-sm hover:text-fun-pink flex items-center gap-1`}
               >
@@ -54,4 +54,4 @@ function BlogsPage() {
   );
 }
 
-export default BlogsPage;
+export default BlogPage;
