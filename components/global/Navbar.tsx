@@ -4,7 +4,7 @@ import { Routes } from "@/data/global";
 
 function Navbar({ currentPage }) {
   return (
-    <nav className="flex items-center justify-between z-100 px-4 py-2 bg-[#1b2c38] rounded-b-3xl">
+    <nav className="flex items-center justify-between z-100 px-4 py-2 backdrop-blur-md bg-[#1b2c3891] rounded-b-3xl">
       <ul className="">
         <li className="list-none font-bold text-lg cursor-pointer">
           <Link href="/">
@@ -37,7 +37,7 @@ function Navbar({ currentPage }) {
               className={`list-none text-fun-pink-light ${
                 currentPage === item.title
                   ? "opacity-100 font-bold"
-                  : "opacity-40 hover:opacity-100 hover:underline transition-opacity font-normal"
+                  : "opacity-40 hover:opacity-100 hover:font-bold transition-opacity font-normal"
               }`}
             >
               <Link href={item.path}>{item.title}</Link>

@@ -36,8 +36,12 @@ export const Routes: Route[] = [
     path: "/projects",
   },
   {
-    title: "Blogs",
-    path: "/blogs",
+    title: "Blog",
+    path: "/blog",
+  },
+  {
+    title: "About Me",
+    path: "/about",
   },
 ];
 
@@ -62,8 +66,13 @@ export const Footer: Footer = {
           leavesWebsite: false,
         },
         {
-          name: "Blogs",
-          link: "/blogs",
+          name: "Blog",
+          link: "/blog",
+          leavesWebsite: false,
+        },
+        {
+          name: "About Me",
+          link: "/about",
           leavesWebsite: false,
         },
       ],
