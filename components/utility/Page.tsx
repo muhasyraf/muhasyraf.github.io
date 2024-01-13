@@ -89,10 +89,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
       <div className="hidden sm:block z-50 sticky top-0 left-0 right-0 w-full">
         <Navbar currentPage={currentPage} />
       </div>
-      <main className="py-5 px-5 sm:px-10 w-full flex-1 text-center">
-        <div className="-m-5 block sm:hidden z-100">
-          <MobileNavbar />
-        </div>
+      <div className="-m-5 block sm:hidden z-100 top-0 left-0 right-0 w-full">
+        <MobileNavbar />
+      </div>
+      <main className="py-5 px-2 sm:px-10 w-full flex-1 text-center">
         <div className="max-sm:pt-20">{children}</div>
       </main>
       <Footer />

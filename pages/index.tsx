@@ -4,8 +4,18 @@ import Page from "@/components/utility/Page";
 import Projects from "@/components/home/Projects";
 import Skills from "@/components/home/Skills";
 import Blog from "@/components/home/Blog";
+import { getAllPosts } from "@/utils/mdx";
 
-export default function Home() {
+export async function getStaticProps() {
+  const posts = await getAllPosts();
+
+  posts.sort((a, b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
+  return { props: { posts } };
+}
+
+export default function Home({ posts }) {
   return (
     <Page
       currentPage="Home"
@@ -15,7 +25,7 @@ export default function Home() {
       <div className="mt-20 space-y-32">
         <Projects />
         <Skills />
-        <Blog />
+        <Blog posts={posts} />
         {/* <Posts allPosts={allPosts} /> */}
       </div>
       <CTA />
