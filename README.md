@@ -1,7 +1,7 @@
 # Asyraf's Personal Website
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-brightgreen)](https://asyraf.live)
-[![Build Status](https://github.com/your-username/your-repo/workflows/Build/badge.svg)](https://github.com/muhasyraf/muhasyraf.github.io/actions)
+[![Build Status](https://github.com/muhasyraf/muhasyraf.github.io/workflows/Build/badge.svg)](https://github.com/muhasyraf/muhasyraf.github.io/actions)
 
 Welcome to my portfolio website! This website showcases my projects, skills, and experiences as a software developer.
 
@@ -30,9 +30,9 @@ The repository is integrated with GitHub Actions for continuous integration. Eve
 
 To run the website locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/your-repo.git`
-2. Install dependencies: `npm install`
-3. Start the development server: `npm run dev`
+1. Clone the repository: `git clone https://github.com/muhasyraf/muhasyraf.github.io.git`
+2. Install dependencies: `yarn add`
+3. Start the development server: `yarn dev`
 
 ## Contributing
 
