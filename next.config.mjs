@@ -1,4 +1,3 @@
-// import withMDX from "@next/mdx";
 /**
  * @type {import('next').NextConfig}
  */

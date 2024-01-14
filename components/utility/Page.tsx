@@ -8,8 +8,8 @@ import React, { ReactChildren } from "react";
 function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
   const pageTitle = `${
     currentPage === "Home"
-      ? "Asyraf - Full-stack Developer"
-      : `${currentPage} - muhasyraf.github.io`
+      ? "Home - Muhammad Asyraf Faiz Kamil"
+      : `${currentPage} - Muhammad Asyraf Faiz Kamil`
   }`;
   console.log(currentPage);
   return (
@@ -38,21 +38,21 @@ function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
         <meta name="description" content={desc} />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://muhasyraf.github.io/" />
+        <meta property="og:url" content="https://asyraf.live/" />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={desc} />
         <meta
           property="og:image"
-          content="https://muhasyraf.github.io/static/misc/og.png"
+          content="https://asyraf.live/static/misc/og.png"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://muhasyraf.github.io/" />
+        <meta property="twitter:url" content="https://asyraf.live/" />
         <meta property="twitter:title" content={pageTitle} />
         <meta property="twitter:description" content={desc} />
         <meta
           property="twitter:image"
-          content="https://muhasyraf.github.io/static/misc/og.png"
+          content="https://asyraf.live/static/misc/og.png"
         ></meta>
       </Head>
       <Script

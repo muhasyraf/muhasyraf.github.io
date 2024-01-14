@@ -12,6 +12,7 @@ import rehypeSlug from "rehype-slug";
 import rehypeHighlight from "rehype-highlight";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeCodeTitles from "rehype-code-titles";
+import rehypeExternalLinks from "rehype-external-links";
 import { MDXRemote } from "next-mdx-remote";
 import dayjs from "dayjs";
 import React from "react";
@@ -134,6 +135,16 @@ export async function getStaticProps(
             },
           },
         ],
+        [
+          rehypeExternalLinks,
+          {
+            target: "_blank",
+            rel: ["noopener", "noreferrer"],
+            properties: {
+              className: ["text-fun-pink", "hover:underline"],
+            },
+          },
+        ],
         rehypeCodeTitles,
       ],
     },
@@ -157,17 +168,16 @@ export default function BlogPage({ posts: { source, frontmatter } }) {
         desc: `${frontmatter.description}`,
       }}
     >
-      <Heading title={frontmatter.title} />
-      <div className="flex flex-col items-start px-3 py-3 md:py-6 md:px-6 gap-3 md:gap-6 max-sm:bg-gradient-to-r sm:bg-gradient-to-br rounded-xl from-[#1730417e] via-transparent to-[#1730417e]">
-        <div className="mt-2 px-2 text-xs sm:text-sm font-light text-fun-gray-light flex flex-col items-start gap-1 w-full">
-          <p>Posted at {dayjs(frontmatter.date).format("MMMM D, YYYY")}</p>
-          <p>
-            by Muhammad{" "}
-            <span className="text-fun-pink font-medium">Asyraf</span> Faiz Kamil
-          </p>
-          <p>{frontmatter.readingTime} approximately</p>
-        </div>
-        <article className="mt-2 px-2 flex flex-col gap-5 w-full text-start">
+      <div className="pt-16 sm:pt-20 pb-8 sm:pb-12 text-md sm:text-lg flex flex-col items-center gap-1 font-normal text-fun-gray-light">
+        <p>{dayjs(frontmatter.date).format("MMMM D, YYYY")}</p>
+        <Heading title={frontmatter.title} />
+        <p>
+          by Muhammad <span className="text-fun-pink font-medium">Asyraf</span>{" "}
+          Faiz Kamil
+        </p>
+      </div>
+      <div className="flex flex-col items-start px-3 py-3 md:py-6 md:px-6 gap-3 md:gap-6 bg-gradient-to-r rounded-xl from-[#1730417e] via-transparent to-[#1730417e]">
+        <article className="px-2 flex flex-col gap-5 w-full text-start">
           <MDXRemote
             {...source}
             components={{

@@ -5,7 +5,7 @@ import readingTime from "reading-time";
 import { sync } from "glob";
 import { notFound } from "next/navigation";
 
-const postsPath = path.join(process.cwd(), "blog");
+const postsPath = path.join(process.cwd(), "data/blog");
 
 export async function getSlugs() {
   const paths = sync(`${postsPath}/*.mdx`, { cwd: postsPath });

@@ -7,12 +7,12 @@ type HeadingProps = {
 function Heading({ title }: HeadingProps) {
   return (
     <div
-      className={`pt-16 sm:pt-20 ${
-        title ? "pb-4 sm:pb-8" : "pb-10 sm:pb-16"
+      className={`${
+        title ? "" : "pb-10 sm:pb-16 pt-16 sm:pt-20"
       } w-full text-center relative`}
     >
       <h1
-        className={`text-2xl sm:text-5xl inline-block w-auto mb-4 relative font-bold text-fun-pink ${
+        className={`text-3xl sm:text-5xl w-auto mb-1 relative font-bold text-fun-pink ${
           title ? "px-2 sm:px-8" : ""
         }`}
       >
