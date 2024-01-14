@@ -19,7 +19,7 @@ export default function Home({ posts }) {
   return (
     <Page
       currentPage="Home"
-      meta={{ desc: "I'm a passionate Full-stack Developer." }}
+      meta={{ desc: "Muhammad Asyraf Faiz Kamil's Personal Website" }}
     >
       <Hero />
       <div className="mt-20 space-y-32">
