@@ -6,14 +6,14 @@ import Image from "next/image";
 function FooterPage() {
   return (
     <footer className="flex flex-col w-screen px-3 sm:px-5 pt-5 pb-8 border-t-2 border-fun-gray-darker z-20 bg-gradient-to-b from-[#1b2c38cf] via-[#1b2c382d] to-[#1b2c38cf]">
-      <div className="w-full max-w-4xl m-auto grid grid-cols-2 gap-5 sm:gap-8">
+      <div className="w-full max-w-4xl m-auto grid grid-cols-2 gap-2 sm:gap-8">
         {Footer.columns.map((item, index) => {
           return (
             <div key={index} className="text-center mb-5 sm:mb-0">
               <h4 className="uppercase text-fun-gray text-sm font-bold">
                 {item.title}
               </h4>
-              <div className="grid grid-cols-2 justify-items-center gap-x-4">
+              <div className="grid grid-cols-2 text-xs sm:text-base justify-items-center gap-x-2 text-fun-gray-light">
                 {item.links.map((item, index) => {
                   return (
                     <div key={index} className="my-2 w-max">
@@ -24,7 +24,7 @@ function FooterPage() {
                           className="items-center flex justify-center"
                         >
                           {item.icon && (
-                            <span className="pr-2 -mb-1">
+                            <span className="pr-1">
                               <Image
                                 src={item.icon}
                                 width={20}
@@ -46,7 +46,7 @@ function FooterPage() {
           );
         })}
       </div>
-      <div className="max-w-full w-full m-auto mt-4 pt-4 sm:mt-2 sm:pt-2 text-center text-fun-gray">
+      <div className="max-w-full w-full m-auto pt-2 sm:pt-4 sm:mt-2 text-center text-fun-gray">
         <div className="flex flex-col items-center justify-center ">
           <div className="inline-flex items-center uppercase text-xs font-bold tracking-widest">
             Made with{" "}
