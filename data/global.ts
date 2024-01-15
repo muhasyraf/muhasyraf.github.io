@@ -98,6 +98,12 @@ export const Footer: Footer = {
           icon: "/static/icons/mail-f.svg",
           leavesWebsite: true,
         },
+        {
+          name: "Instagram",
+          link: "https://www.instagram.com/faizkamil1/",
+          icon: "/static/icons/instagram.svg",
+          leavesWebsite: true,
+        },
       ],
     },
   ],

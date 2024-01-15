@@ -54,13 +54,13 @@ function Hero() {
           alt="react"
         />
         <img
-          className="sqD bottom-2 sm:top-60 left-4 sm:left-72"
+          className="sqD bottom-4 sm:top-60 left-4 sm:left-72"
           style={{ animationDelay: "0.5s" }}
           src="/static/sqd/code.svg"
           alt="code"
         />
         <img
-          className="sqD bottom-4 sm:top-72 right-10 sm:right-[295px]"
+          className="sqD bottom-0 sm:top-72 right-10 sm:right-[295px]"
           style={{ animationDelay: "1s" }}
           src="/static/sqd/github.svg"
           alt="github"
