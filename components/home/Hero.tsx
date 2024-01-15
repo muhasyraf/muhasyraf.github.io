@@ -48,7 +48,7 @@ function Hero() {
           alt="laravel"
         />
         <img
-          className="sqD top-20 sm:top-[40px] right-[5%] sm:right-[170px]"
+          className="sqD top-14 sm:top-[40px] right-[5%] sm:right-[170px]"
           style={{ animationDelay: "0.1s" }}
           src="/static/sqd/react.svg"
           alt="react"
@@ -60,7 +60,7 @@ function Hero() {
           alt="code"
         />
         <img
-          className="sqD bottom-14 sm:top-72 right-16 sm:right-[295px]"
+          className="sqD bottom-4 sm:top-72 right-10 sm:right-[295px]"
           style={{ animationDelay: "1s" }}
           src="/static/sqd/github.svg"
           alt="github"
