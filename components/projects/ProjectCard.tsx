@@ -15,7 +15,11 @@ function ProjectCard({ project, index }) {
     >
       <Link
         href={`/projects/${KebabCase(project.title)}`}
-        className={`relative rounded-xl transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard justify-self-center`}
+        className={`${
+          index % 2 === 0
+            ? "sm:bg-gradient-to-r sm:from-[#173041b6]"
+            : "sm:bg-gradient-to-l sm:from-[#173041b6]"
+        } h-max relative rounded-xl p-3 sm:p-4 bg-gradient-to-b from-[#173041b6] transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard justify-self-center self-center`}
       >
         <img
           className="w-max rounded-xl transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard"
@@ -34,7 +38,7 @@ function ProjectCard({ project, index }) {
               {project.title}
             </h3>
           </Link>
-          <p className="text-fun-gray-light text-base mt-2 text-justify sm:text-center">
+          <p className="text-fun-gray-light text-base mt-2 text-start sm:text-center">
             {project.desc}
           </p>
         </div>

@@ -1,7 +1,7 @@
 # Asyraf's Personal Website
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-brightgreen)](https://asyraf.live)
-[![Build Status](https://github.com/muhasyraf/muhasyraf.github.io/workflows/Build/badge.svg)](https://github.com/muhasyraf/muhasyraf.github.io/actions)
+[![Build Status](https://github.com/muhasyraf/muhasyraf.github.io/actions/workflows/nextjs.yml/badge.svg)](https://github.com/muhasyraf/muhasyraf.github.io/actions)
 
 Welcome to my portfolio website! This website showcases my projects, skills, and experiences as a software developer.
 
