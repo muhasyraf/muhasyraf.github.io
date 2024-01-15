@@ -5,15 +5,15 @@ import Image from "next/image";
 
 function FooterPage() {
   return (
-    <footer className="flex flex-col w-screen px-5 pt-5 pb-8 border-t-2 border-fun-gray-darker z-20 bg-gradient-to-b from-[#1b2c38cf] via-[#1b2c382d] to-[#1b2c38cf]">
-      <div className="w-full max-w-4xl m-auto grid grid-cols-2">
+    <footer className="flex flex-col w-screen px-3 sm:px-5 pt-5 pb-8 border-t-2 border-fun-gray-darker z-20 bg-gradient-to-b from-[#1b2c38cf] via-[#1b2c382d] to-[#1b2c38cf]">
+      <div className="w-full max-w-4xl m-auto grid grid-cols-2 gap-5 sm:gap-8">
         {Footer.columns.map((item, index) => {
           return (
             <div key={index} className="text-center mb-5 sm:mb-0">
               <h4 className="uppercase text-fun-gray text-sm font-bold">
                 {item.title}
               </h4>
-              <div className="flex flex-col items-center">
+              <div className="grid grid-cols-2 justify-items-center gap-x-4">
                 {item.links.map((item, index) => {
                   return (
                     <div key={index} className="my-2 w-max">
