@@ -15,11 +15,14 @@ function Hero() {
           a Grateful{" "}
           <span className="heroShiny1 text-fun-pink">Lifelong Learner</span>{" "}
         </h1>
-        <svg className="arrows">
-          <path className="a1" d="M0 0 L30 32 L60 0"></path>
-          <path className="a2" d="M0 20 L30 52 L60 20"></path>
-          <path className="a3" d="M0 40 L30 72 L60 40"></path>
-        </svg>
+        <div className="scrollDown flex flex-col justify-center items-center">
+          <p className="text-base text-gray-400">Scroll down</p>
+          <img
+            src="/static/icons/arrow-up.svg"
+            alt="Arrow Icon"
+            className="rotate-180 w-4"
+          />
+        </div>
         <img
           className="sqD top-[0px] left-2 sm:left-40"
           style={{ animationDelay: "1s" }}
@@ -27,19 +30,19 @@ function Hero() {
           alt="laravel"
         />
         <img
-          className="sqD top-14 sm:top-[40px] right-[5%] sm:right-[170px]"
+          className="sqD top-24 sm:top-[40px] right-[5%] sm:right-[170px]"
           style={{ animationDelay: "0.1s" }}
           src="/static/sqd/react.svg"
           alt="react"
         />
         <img
-          className="sqD bottom-40 sm:top-60 left-4 sm:left-72"
+          className="sqD bottom-32 sm:top-60 left-4 sm:left-72"
           style={{ animationDelay: "0.5s" }}
           src="/static/sqd/code.svg"
           alt="code"
         />
         <img
-          className="sqD bottom-28 sm:top-72 right-10 sm:right-[295px]"
+          className="exclude-sqD bottom-28 sm:top-72 right-10 sm:right-[295px]"
           style={{ animationDelay: "1s" }}
           src="/static/sqd/github.svg"
           alt="github"

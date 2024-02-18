@@ -15,7 +15,7 @@ export default function About() {
               className="w-auto sm:h-[25rem] lg:h-[35rem] overflow-visible"
             />
           </div>
-          <div className="lg:w-full pt-2 lg:pb-14 flex flex-col justify-center lg:justify-end items-center text-3xl sm:text-5xl lg:text-7xl font-bold text-fun-pink-light gap-1 lg:gap-4">
+          <div className="lg:w-full pt-2 lg:pb-14 flex flex-col justify-center lg:justify-end items-center text-2xl sm:text-5xl lg:text-7xl font-bold text-fun-pink-light gap-1 lg:gap-4">
             <h1>Muhammad</h1>
             <h1 className="text-fun-pink">Asyraf</h1>
             <h1>Faiz</h1>
