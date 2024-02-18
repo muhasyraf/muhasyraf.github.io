@@ -67,6 +67,52 @@ body::-webkit-scrollbar-thumb {
 
 /* Mobile Nav */
 
+.arrows {
+	width: 60px;
+	height: 72px;
+  position: absolute;
+  bottom: 5px;
+}
+
+.arrows path {
+	stroke: #7fd1eb;
+	fill: transparent;
+	stroke-width: 2px;	
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
 .burger {
   transition: opacity 300ms ease;
   border: 0;
@@ -303,13 +349,25 @@ pre {
 
 @keyframes float {
   0% {
-    transform: translateY(0px);
+    transform: translateY(-5px);
   }
   50% {
     transform: translateY(10px);
   }
   100% {
-    transform: translateY(0px);
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -326,6 +384,10 @@ pre {
 
 .sqD {
   @apply absolute z-[1] max-sm:block sm:hidden lg:block;
+}
+
+.to-about {
+  animation: float 2s infinite ease-in-out;
 }
 
 /* All svg squiggle decorations */

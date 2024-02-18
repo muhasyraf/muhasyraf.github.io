@@ -20,7 +20,7 @@ export const Skills: Skill[] = [
   },
   {
     title: "TailwindCSS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+    icon: "/static/icons/skills/tailwind.svg",
   },
   {
     title: "React",
@@ -45,7 +45,7 @@ export const Skills: Skill[] = [
   },
   {
     title: "Laravel",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg",
+    icon: "/static/icons/skills/laravel.svg",
   },
   {
     title: "ExpressJS",

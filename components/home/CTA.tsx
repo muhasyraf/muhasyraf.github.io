@@ -2,7 +2,7 @@ import React from "react";
 
 function CTA() {
   return (
-    <div className="pt-36 relative w-full">
+    <div className="pt-28 relative w-full">
       <div className="pt-14 pb-40">
         <h2 className="text-4xl md:text-5xl font-bold mb-10 text-fun-pink-light">
           Let's Build Something Together!

@@ -28,7 +28,6 @@ export default function Home({ posts }) {
         <Blog posts={posts} />
         {/* <Posts allPosts={allPosts} /> */}
       </div>
-      <CTA />
     </Page>
   );
 }
