@@ -96,7 +96,7 @@ export default function About() {
               Badan Pusat Statistik: Web Developer Intern
             </h1>
             <p className="text-sm sm:text-base text-gray-200">
-              July 2023 - Agustus 2023
+              July 2023 - August 2023
             </p>
           </div>
         </div>

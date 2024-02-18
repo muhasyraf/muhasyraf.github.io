@@ -20,29 +20,29 @@ function Hero() {
           <img
             src="/static/icons/arrow-up.svg"
             alt="Arrow Icon"
-            className="rotate-180 w-4"
+            className="rotate-180 w-5 scroll-arrow"
           />
         </div>
         <img
-          className="sqD top-[0px] left-2 sm:left-40"
+          className="sqD top-[0px] left-2 sm:left-40 max-sm:block sm:hidden lg:block"
           style={{ animationDelay: "1s" }}
           src="/static/sqd/laravel.svg"
           alt="laravel"
         />
         <img
-          className="sqD top-24 sm:top-[40px] right-[5%] sm:right-[170px]"
+          className="sqD top-20 sm:top-[40px] right-[5%] sm:right-[170px] max-sm:block sm:hidden lg:block"
           style={{ animationDelay: "0.1s" }}
           src="/static/sqd/react.svg"
           alt="react"
         />
         <img
-          className="sqD bottom-32 sm:top-60 left-4 sm:left-72"
+          className="sqD bottom-36 sm:top-60 left-16 sm:left-72 max-sm:block sm:hidden lg:block"
           style={{ animationDelay: "0.5s" }}
           src="/static/sqd/code.svg"
           alt="code"
         />
         <img
-          className="exclude-sqD bottom-28 sm:top-72 right-10 sm:right-[295px]"
+          className="sqD exclude-sqD bottom-28 sm:top-72 right-10 sm:right-[295px]"
           style={{ animationDelay: "1s" }}
           src="/static/sqd/github.svg"
           alt="github"

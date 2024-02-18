@@ -326,15 +326,17 @@ pre {
   }
 }
 
-@keyframes fadeIn {
+@keyframes floatDown {
   0% {
-    opacity: 0.25;
+    transform: translateY(-15px);
+    opacity: 0;
   }
   50% {
     opacity: 1;
   }
   100% {
-    opacity: 0.25;
+    transform: translateY(30px);
+    opacity: 0;
   }
 }
 
@@ -350,11 +352,11 @@ pre {
 }
 
 .sqD {
-  @apply absolute z-[1] max-sm:block sm:hidden lg:block;
+  @apply absolute z-[1];
 }
 
 .exclude-sqD {
-  @apply absolute z-[1] hidden lg:block;
+  @apply hidden lg:block;
 }
 .to-about {
   animation: float 2s infinite ease-in-out;
@@ -363,7 +365,7 @@ pre {
 .scrollDown {
   position: absolute;
   bottom: 0px;
-  animation: fadeIn 3s infinite ease-in-out;
+  animation: floatDown 2.5s infinite ease-in-out;
 }
 
 /* All svg squiggle decorations */

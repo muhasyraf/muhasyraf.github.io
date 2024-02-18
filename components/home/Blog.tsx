@@ -104,8 +104,13 @@ export default function Blog({ posts }) {
       </div>
       <div className="flex flex-col justify-center items-center py-24">
         <Link href="/about">
-          <div className="font-bold text-xl lg:text-4xl text-bg max-w-fit border-2 rounded-xl border-fun-pink bg-fun-pink hover:bg-transparent hover:border-collapse hover:text-fun-pink-light mx-auto text-center w-full whitespace-nowrap px-6 lg:px-10 py-2 lg:py-4 transition-colors cursor-pointer to-about">
-            Click to get to know me better!
+          <div className="font-bold text-xl lg:text-3xl text-bg max-w-fit border-2 rounded-2xl border-fun-pink bg-fun-pink transition hover:-translate-y-3 mx-auto text-center w-full whitespace-nowrap px-4 lg:px-6 py-2 lg:py-4 cursor-pointer flex flex-row gap-2">
+            <p>Get to know me better!</p>
+            <img
+              src="/static/icons/plane.svg"
+              alt="Plane Icon"
+              className="w-8"
+            />
           </div>
         </Link>
       </div>
