@@ -5,7 +5,12 @@ import MobileNavbar from "../global/MobileNavbar";
 import Navbar from "../global/Navbar";
 import React, { ReactChildren } from "react";
 
-function Page({ currentPage, meta: { title, desc }, children }: PageProps) {
+function Page({
+  currentPage,
+  addClass,
+  meta: { title, desc },
+  children,
+}: PageProps) {
   const pageTitle = `${
     currentPage === "Home"
       ? "Home - Muhammad Asyraf Faiz Kamil"
@@ -93,7 +98,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
         <MobileNavbar />
       </div>
       <main className="py-5 px-2 sm:px-10 w-full flex-1 text-center">
-        <div className="max-sm:pt-20">{children}</div>
+        <div className={`max-sm:pt-20 ${addClass}`}>{children}</div>
       </main>
       <Footer />
     </div>
@@ -104,6 +109,7 @@ export default Page;
 
 type PageProps = {
   currentPage: string;
+  addClass?: string;
   meta: {
     title?: string;
     desc: string;

@@ -102,6 +102,13 @@ export default function Blog({ posts }) {
           );
         })}
       </div>
+      <div className="flex flex-col justify-center items-center py-24">
+        <Link href="/about">
+          <div className="font-bold text-xl lg:text-4xl text-bg max-w-fit border-2 rounded-xl border-fun-pink bg-fun-pink hover:bg-transparent hover:border-collapse hover:text-fun-pink-light mx-auto text-center w-full whitespace-nowrap px-6 lg:px-10 py-2 lg:py-4 transition-colors cursor-pointer to-about">
+            Click to get to know me better!
+          </div>
+        </Link>
+      </div>
     </div>
   );
 }

@@ -12,7 +12,7 @@ function Heading({ title }: HeadingProps) {
       } w-full text-center relative`}
     >
       <h1
-        className={`text-3xl sm:text-5xl w-auto mb-1 relative font-bold text-fun-pink ${
+        className={`text-2xl sm:text-4xl w-auto mb-1 relative font-bold text-fun-pink-light ${
           title ? "px-2 sm:px-8" : ""
         }`}
       >
