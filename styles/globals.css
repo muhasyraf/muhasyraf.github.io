@@ -67,51 +67,6 @@ body::-webkit-scrollbar-thumb {
 
 /* Mobile Nav */
 
-.arrows {
-	width: 60px;
-	height: 72px;
-  position: absolute;
-  bottom: 5px;
-}
-
-.arrows path {
-	stroke: #7fd1eb;
-	fill: transparent;
-	stroke-width: 2px;	
-	animation: arrow 2s infinite;
-	-webkit-animation: arrow 2s infinite; 
-}
-
-@keyframes arrow
-{
-0% {opacity:0}
-40% {opacity:1}
-80% {opacity:0}
-100% {opacity:0}
-}
-
-@-webkit-keyframes arrow /*Safari and Chrome*/
-{
-0% {opacity:0}
-40% {opacity:1}
-80% {opacity:0}
-100% {opacity:0}
-}
-
-.arrows path.a1 {
-	animation-delay:-1s;
-	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
-}
-
-.arrows path.a2 {
-	animation-delay:-0.5s;
-	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
-}
-
-.arrows path.a3 {	
-	animation-delay:0s;
-	-webkit-animation-delay:0s; /* Safari 和 Chrome */
-}
 
 .burger {
   transition: opacity 300ms ease;
@@ -371,23 +326,46 @@ pre {
   }
 }
 
+@keyframes floatDown {
+  0% {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+}
+
 .heroElem {
   animation: scaleDownIn 1.5s cubic-bezier(0.87, 0, 0.13, 1);
 }
 
 .heroElem .sqD:not(.squiggle-hero-pop1) {
-  animation: float 2s infinite ease-in-out;
+  animation: float 3.5s infinite ease-in-out;
 }
 .heroTitle .sqD {
   @apply scale-[0.8] lg:scale-100;
 }
 
 .sqD {
-  @apply absolute z-[1] max-sm:block sm:hidden lg:block;
+  @apply absolute z-[1];
 }
 
+.exclude-sqD {
+  @apply hidden lg:block;
+}
 .to-about {
   animation: float 2s infinite ease-in-out;
+}
+
+.scrollDown {
+  position: absolute;
+  bottom: 0px;
+  animation: floatDown 2.5s infinite ease-in-out;
 }
 
 /* All svg squiggle decorations */
