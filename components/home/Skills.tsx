@@ -11,10 +11,8 @@ function SkillsPage() {
         {Skills.map((item, index) => {
           return (
             <div
-              title={item.title}
               key={index}
-              className="w-10 mx-auto flex items-center flex-col justify-center tooltip"
-              data-tip={item.title}
+              className="w-10 mx-auto flex items-center flex-col justify-center transition hover:-translate-y-2.5 cursor-pointer hover:scale-125"
             >
               <img src={item.icon} style={item.style} alt="Skills icon" />
               <p className="text-xs text-fun-pink-light font-monospace font-bold mt-3 opacity-80">

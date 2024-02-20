@@ -177,8 +177,8 @@ export default function BlogPage({ posts: { source, frontmatter } }) {
           Faiz Kamil
         </p>
       </div>
-      <div className="flex flex-col items-start px-3 py-3 md:py-6 md:px-6 gap-3 md:gap-6 bg-gradient-to-r rounded-xl from-[#1730417e] via-transparent to-[#1730417e] sm:w-[55rem] mb-16">
-        <article className="px-2 flex flex-col gap-5 w-full text-start">
+      <div className="flex flex-col items-start px-3 py-6 md:py-8 md:px-6 gap-3 md:gap-6 bg-gradient-to-r rounded-xl from-[#1730417e] via-transparent to-[#1730417e] sm:w-[55rem] mb-16">
+        <article className="px-2 flex flex-col gap-2 sm:gap-5 w-full text-start">
           <MDXRemote
             {...source}
             components={{
@@ -189,12 +189,12 @@ export default function BlogPage({ posts: { source, frontmatter } }) {
             }}
           />
         </article>
-        <Link href={`/blog`} className="mt-8 self-center">
-          <div className="text-fun-gray-light hover:underline">
-            Back to all posts
-          </div>
-        </Link>
       </div>
+      <Link href={`/blog`} className="mt-2 self-center">
+        <div className="text-fun-gray-light hover:underline">
+          Back to all posts
+        </div>
+      </Link>
     </Page>
   );
 }

@@ -11,7 +11,7 @@ type Testimonial = {
 
 export const Skills: Skill[] = [
   {
-    title: "Javascript",
+    title: "JavaScript",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
   },
   {
@@ -19,7 +19,7 @@ export const Skills: Skill[] = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
   },
   {
-    title: "TailwindCSS",
+    title: "Tailwind CSS",
     icon: "/static/icons/skills/tailwind.svg",
   },
   {
@@ -32,11 +32,11 @@ export const Skills: Skill[] = [
     style: { filter: "invert(1)" },
   },
   {
-    title: "Typescript",
+    title: "TypeScript",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
   },
   {
-    title: "NodeJS",
+    title: "Node.js",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   },
   {
@@ -48,7 +48,7 @@ export const Skills: Skill[] = [
     icon: "/static/icons/skills/laravel.svg",
   },
   {
-    title: "ExpressJS",
+    title: "Express",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     style: { filter: "invert(1)" },
   },
