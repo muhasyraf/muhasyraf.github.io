@@ -81,7 +81,7 @@ export const Experience: Experience[] = [
     image: "/static/icons/about/logo-metamata.png",
     imagestyle: {
       "border-radius": "0.5rem",
-      "background-color": "rgb(255 255 255",
+      "background-color": "rgb(255 255 255)",
       "padding-left": "0.25rem",
       "padding-right": "0.25rem",
     },
