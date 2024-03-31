@@ -1,25 +1,43 @@
 import { KebabCase, KebabArray } from "@/utils/utils";
 import { Project } from "types";
 
+let id = 0;
+
 const Projects: Project[] = [
   {
-    id: 0,
-    title: "BarokahBiz: Full-fledged Enterprise Web App",
+    id: id++,
+    title: "Metamata: Event Ecosystem Platform",
+    desc: "A platform for managing events, including ticketing, registration, and event management",
+    img: "/static/projects/metamata.png",
+    link: "https://metamata.id",
+    tags: ["Laravel", "React", "Inertia.js", "MySQL", "Bootstrap"],
+  },
+  {
+    id: id++,
+    title: "BarokahBiz: Enterprise Web App",
     desc: "Enterprise web app for managing business operations, including sales, purchases, inventory, and accounting",
     img: "/static/projects/barokahbiz.png",
     github: "https://github.com/muhasyraf/easyterprise",
-    tags: ["PHP", "Laravel", "Bootstrap 5", "MariaDB"],
+    tags: ["Laravel", "MySQL", "jQuery", "Bootstrap"],
   },
   {
-    id: 1,
+    id: id++,
     title: "SIMONEV - Badan Pusat Statistik",
     desc: "Sistem Informasi Monitoring dan Evaluasi. An Integrated system for monitoring and evaluating the budget realization and achievement of company employee performance",
     img: "/static/projects/simonev.png",
     github: "https://github.com/muhasyraf/bps-simonev",
-    tags: ["PHP", "Laravel", "Livewire", "Tailwind CSS", "MariaDB"],
+    tags: ["Laravel", "Livewire", "Tailwind CSS", "MySQL"],
   },
   {
-    id: 2,
+    id: id++,
+    title: "Samudralaya: Marine Life Conservation Platform (Bohim App)",
+    desc: "A platform for marine life conservation, including campaign, report, and education",
+    img: "/static/projects/bohimapp.png",
+    github: "https://github.com/muhasyraf/bohim-app",
+    tags: ["Laravel", "React", "Inertia.js", "Tailwind CSS", "MySQL"],
+  },
+  {
+    id: id++,
     title: "My Personal Website",
     desc: "A website to showcase my portfolio and my writings.",
     img: "/static/projects/personal.png",
@@ -28,7 +46,7 @@ const Projects: Project[] = [
     tags: ["Next.js", "TypeScript", "React", "Tailwind CSS"],
   },
   {
-    id: 3,
+    id: id++,
     title: "Miltactoe: Tic Tac Toe Game at its Peak",
     desc: "Tic tac toe game with a twist. Play against your friend and try to win!",
     img: "/static/projects/miltactoe.png",
