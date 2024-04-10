@@ -3,7 +3,7 @@ import { Contact } from "@/data/content/about";
 
 export default function Contacts() {
   return (
-    <div className="flex flex-col justify-center gap-3 sm:gap-6 w-full rounded-lg bg-gradient-to-br from-[#173041b4] via-transparent to-[#173041b4] my-2 sm:my-4 p-4 sm:p-8">
+    <div className="flex flex-col justify-center gap-3 sm:gap-6 w-full rounded-lg shadow-lg bg-fun-card my-2 sm:my-4 p-4 sm:p-8">
       <h1 className="font-bold text-fun-pink text-2xl sm:text-5xl text-start">
         Contacts
       </h1>

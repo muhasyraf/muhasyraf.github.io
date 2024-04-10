@@ -6,20 +6,12 @@ import Link from "next/link";
 function ProjectCard({ project, index }) {
   return (
     <div
-      className={`${
-        index % 2 === 0
-          ? "sm:bg-gradient-to-l sm:from-[#173041b6]"
-          : "sm:bg-gradient-to-r sm:from-[#173041b6]"
-      } bg-gradient-to-t from-[#173041b6] rounded-xl max-w-full grid max-sm:grid-flow-row max-sm:auto-rows-max sm:grid-cols-2 gap-4 py-4 sm:py-8 px-4`}
+      className={`shadow-lg bg-fun-card rounded-xl max-w-full grid max-sm:grid-flow-row max-sm:auto-rows-max sm:grid-cols-2 gap-4 py-4 sm:py-8 px-4`}
       key={project.id}
     >
       <Link
         href={`/projects/${KebabCase(project.title)}`}
-        className={`${
-          index % 2 === 0
-            ? "sm:bg-gradient-to-r sm:from-[#173041b6]"
-            : "sm:bg-gradient-to-l sm:from-[#173041b6]"
-        } h-max relative rounded-xl p-3 sm:p-4 bg-gradient-to-b from-[#173041b6] transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard justify-self-center self-center`}
+        className={`shadow-lg h-max relative rounded-xl transition hover:-translate-y-2 hover:opacity-75 will-change-projectCard justify-self-center self-center`}
       >
         <img
           className="w-max rounded-xl transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard"
@@ -34,11 +26,11 @@ function ProjectCard({ project, index }) {
       >
         <div className="w-full h-max">
           <Link href={`/projects/${KebabCase(project.title)}`}>
-            <h3 className="text-xl md:text-3xl font-bold text-fun-pink-light text-center">
+            <h3 className="text-2xl md:text-3xl xl:text-4xl font-bold text-fun-pink-light text-center">
               {project.title}
             </h3>
           </Link>
-          <p className="text-fun-gray-light text-base mt-2 text-start sm:text-center">
+          <p className="text-fun-gray-light text-base sm:text-lg mt-2 text-start sm:text-center">
             {project.desc}
           </p>
         </div>

@@ -31,7 +31,7 @@ export default function MobileNavbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur-md bg-[#1b2c3891] rounded-b-3xl">
+    <nav className="fixed top-0 w-full z-50 backdrop-blur-md bg-fun-card/75 rounded-b-3xl">
       <div
         className={`w-full justify-between flex items-center ${
           isMenuRendered && "bg-transparent"

@@ -70,7 +70,7 @@ export default function Blog({ posts }) {
           return (
             <div
               key={index}
-              className={`bg-gradient-to-br from-[#173041b4] via-transparent to-[#173041b4] p-4 rounded-xl h-full flex flex-col justify-between`}
+              className={`shadow-lg bg-fun-card p-4 rounded-xl h-full flex flex-col justify-between`}
             >
               <Link href={`/blog/${item.slug}`}>
                 <h2 className="font-bold text-xl text-fun-pink">

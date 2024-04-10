@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function FooterPage() {
   return (
-    <footer className="flex flex-col w-screen px-3 sm:px-5 pt-5 pb-8 border-t-2 border-fun-gray-darker z-20 bg-gradient-to-b from-[#1b2c38cf] via-[#1b2c382d] to-[#1b2c38cf]">
+    <footer className="flex flex-col w-screen px-3 sm:px-5 pt-5 pb-8 z-20 backdrop-blur-md bg-fun-card/75">
       <div className="w-full max-w-4xl m-auto grid grid-cols-2 gap-2 sm:gap-8">
         {Footer.columns.map((item, index) => {
           return (

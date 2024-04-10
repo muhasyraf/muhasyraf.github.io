@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col justify-center lg:justify-end gap-6 w-full rounded-lg bg-gradient-to-br from-[#173041b4] via-transparent to-[#173041b4] lg:h-[65dvh] my-2 sm:my-4 px-2 sm:px-4">
+    <div className="flex flex-col justify-center lg:justify-end gap-6 w-full rounded-lg bg-fun-card lg:h-[65dvh] my-2 sm:my-4 px-2 sm:px-4 shadow-lg">
       <div className="grid grid-flow-col lg:grid-cols-2 lg:gap-2 px-2 lg:px-4">
         <div className="flex justify-center items-center">
           <img

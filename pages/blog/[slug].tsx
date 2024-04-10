@@ -167,7 +167,7 @@ export default function BlogPage({ posts: { source, frontmatter } }) {
         title: `${frontmatter.title}`,
         desc: `${frontmatter.description}`,
       }}
-      addClass="flex flex-col justify-start items-center px-4"
+      addClass="flex flex-col justify-start items-center"
     >
       <div className="pt-16 sm:pt-20 pb-8 sm:pb-12 text-md sm:text-lg flex flex-col items-center gap-1 font-normal text-fun-gray-light">
         <p>{dayjs(frontmatter.date).format("MMMM D, YYYY")}</p>
@@ -177,7 +177,7 @@ export default function BlogPage({ posts: { source, frontmatter } }) {
           Faiz Kamil
         </p>
       </div>
-      <div className="flex flex-col items-start px-3 py-6 md:py-8 md:px-6 gap-3 md:gap-6 bg-gradient-to-r rounded-xl from-[#1730417e] via-transparent to-[#1730417e] sm:w-[55rem] mb-16">
+      <div className="flex flex-col items-start px-3 py-6 md:py-8 md:px-6 gap-3 md:gap-6 rounded-xl shadow-lg bg-fun-card sm:w-[55rem] mb-16">
         <article className="px-2 flex flex-col gap-2 sm:gap-5 w-full text-start">
           <MDXRemote
             {...source}

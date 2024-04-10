@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["Rubik", "system-ui", "sans"],
+      sans: ["'Public Sans'", "system-ui", "sans"],
       monospace: ["Chivo Mono", "monospace"],
     },
     colors: {
@@ -25,8 +25,9 @@ module.exports = {
     },
     extend: {
       colors: {
-        bg: "#29201b",
-        "fun-gray-light": "#c0daed",
+        bg: "#08090f",
+        "fun-card": "#181f2f",
+        "fun-gray-light": "#d0e4f2",
         "fun-gray": "#7b89a8",
         "fun-gray-medium": "#767c85",
         "fun-gray-darker": "#2a2a2c",
