@@ -12,6 +12,7 @@ type ProfileSummary = {
 type Experience = {
   companyName: string;
   position: string;
+  employmentType: string;
   image: string;
   imagestyle?: object;
   link: string;
@@ -76,8 +77,21 @@ export const ProfileSummary: ProfileSummary[] = [
 
 export const Experience: Experience[] = [
   {
-    companyName: "Metamata.id",
-    position: "Full-stack Developer Intern",
+    companyName: "NBS",
+    position: "Software Engineer",
+    employmentType: "Internship",
+    image: "/static/icons/about/logo-nbs.png",
+    imagestyle: {
+      "border-radius": "0.5rem",
+      "background-color": "rgb(255 255 255)",
+    },
+    link: "https://nbs.co.id/",
+    duration: "July 2024 - Current",
+  },
+  {
+    companyName: "Meta Mata",
+    position: "Full-stack Developer",
+    employmentType: "Internship",
     image: "/static/icons/about/logo-metamata.png",
     imagestyle: {
       "border-radius": "0.5rem",
@@ -86,11 +100,12 @@ export const Experience: Experience[] = [
       "padding-right": "0.25rem",
     },
     link: "https://metamata.id/",
-    duration: "November 2023 - Current",
+    duration: "November 2023 - March 2024",
   },
   {
     companyName: "Badan Pusat Statistik",
-    position: "Web Developer Intern",
+    position: "Web Developer",
+    employmentType: "Internship",
     image: "/static/icons/about/logobps.svg",
     link: "https://bps.go.id/",
     duration: "July 2023 - August 2023",

@@ -3,6 +3,7 @@ import React from "react";
 type Experience = {
   companyName: string;
   position: string;
+  employmentType: string;
   duration: string;
   image: string;
   imagestyle?: object;
@@ -27,9 +28,13 @@ export default function ExperienceCard(
           />
         </a>
       </div>
-      <h1 className="font-bold text-fun-pink-light text-lg sm:text-2xl">
-        {experience.companyName}: {experience.position}
+      <h1 className="text-fun-pink-light text-lg sm:text-2xl">
+        <span className="font-bold">{experience.companyName}</span>:{" "}
+        {experience.position}
       </h1>
+      <span className="text-fun-gray-light border border-fun-gray-light bg-transparent px-2 py-1 rounded-lg text-xs sm:text-sm italic font-medium hover:text-bg hover:bg-fun-gray-light">
+        {experience.employmentType}
+      </span>
       <p className="text-sm sm:text-base text-gray-200">
         {experience.duration}
       </p>

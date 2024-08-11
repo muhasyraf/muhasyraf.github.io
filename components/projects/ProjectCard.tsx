@@ -14,7 +14,7 @@ function ProjectCard({ project, index }) {
         className={`shadow-lg h-max relative rounded-xl transition hover:-translate-y-2 hover:opacity-75 will-change-projectCard justify-self-center self-center`}
       >
         <img
-          className="w-max rounded-xl transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard"
+          className="w-max rounded-xl transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard max-h-[250px] sm:max-h-[350px]"
           src={project.img}
           alt="Project Image"
         />
@@ -62,7 +62,13 @@ function ProjectCard({ project, index }) {
               index % 2 !== 0 ? "sm:items-end" : "sm:items-start"
             }`}
           >
-            <p className="font-light text-sm text-fun-gray-light">Source </p>
+            <p
+              className={`font-light text-sm text-fun-gray-light ${
+                project.link || project.github ? "" : "hidden"
+              }`}
+            >
+              Source{" "}
+            </p>
             <div className="flex justify-between items-center w-full">
               <div
                 className={`flex flex-row gap-1 ${

@@ -6,6 +6,19 @@ let id = 0;
 const Projects: Project[] = [
   {
     id: id++,
+    title: "TBIG Mobile CMS",
+    desc: "A content management system for managing corporate mobile app content",
+    img: "/static/projects/tbigmobile-cms.png",
+    tags: [
+      "Laravel",
+      "Microsoft SQL Server",
+      "Bootstrap",
+      "JavaScript",
+      "jQuery",
+    ],
+  },
+  {
+    id: id++,
     title: "Metamata: Event Ecosystem Platform",
     desc: "A platform for managing events, including ticketing, registration, and event management",
     img: "/static/projects/metamata.png",
@@ -14,11 +27,26 @@ const Projects: Project[] = [
   },
   {
     id: id++,
+    title: "M Bloc Design Week Website",
+    desc: "A website for M Bloc Design Week event, including event information, schedule, and registration",
+    img: "/static/projects/mbdw.png",
+    link: "https://mblocdesignweek.id",
+    tags: [
+      "Astro",
+      "Cloudflare Worker",
+      "Hono",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+    ],
+  },
+  {
+    id: id++,
     title: "BarokahBiz: Enterprise Web App",
     desc: "Enterprise web app for managing business operations, including sales, purchases, inventory, and accounting",
     img: "/static/projects/barokahbiz.png",
     github: "https://github.com/muhasyraf/easyterprise",
-    tags: ["Laravel", "MySQL", "jQuery", "Bootstrap"],
+    tags: ["Laravel", "MySQL", "JavaScript", "jQuery", "Bootstrap"],
   },
   {
     id: id++,
