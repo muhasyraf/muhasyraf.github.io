@@ -3,7 +3,7 @@ import { Skills } from "@/data/content/home";
 
 function SkillsPage() {
   return (
-    <div className="flex flex-col px-4 md:px-8 py-4 md:flex-row shadow-lg bg-fun-card rounded-xl justify-between relative">
+    <div className="flex flex-col px-4 md:px-8 py-4 md:flex-row shadow-lg bg-fun-card border-2 border-fun-border rounded-xl justify-between relative">
       <h2 className="text-2xl md:text-3xl w-full text-center md:self-center md:text-left font-bold md:max-w-lg mb-10 md:mr-10 md:mb-0 md:w-max mr-0 text-fun-pink-light">
         Some tools i've been working with
       </h2>

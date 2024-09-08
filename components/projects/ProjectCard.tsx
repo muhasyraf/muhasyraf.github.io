@@ -6,7 +6,7 @@ import Link from "next/link";
 function ProjectCard({ project, index }) {
   return (
     <div
-      className={`shadow-lg bg-fun-card rounded-xl max-w-full grid max-sm:grid-flow-row max-sm:auto-rows-max sm:grid-cols-2 gap-4 py-4 sm:py-8 px-4`}
+      className={`shadow-lg bg-fun-card rounded-xl max-w-full grid max-sm:grid-flow-row max-sm:auto-rows-max sm:grid-cols-2 gap-4 py-4 sm:py-8 px-4 border border-fun-border`}
       key={project.id}
     >
       <Link
@@ -49,7 +49,7 @@ function ProjectCard({ project, index }) {
               return (
                 <li key={tag}>
                   <Link href={`/projects/tag/${KebabCase(tag)}`}>
-                    <div className="rounded-lg bg-transparent font-monospace text-fun-pink border border-1 border-fun-pink py-1 px-2 cursor-pointer text-xs hover:bg-fun-pink hover:text-bg hover:border-bg">
+                    <div className="rounded-lg bg-transparent font-monospace text-fun-pink border border-fun-border-light py-1 px-2 cursor-pointer text-xs hover:bg-fun-pink hover:text-bg hover:border-bg">
                       {tag}
                     </div>
                   </Link>
@@ -80,7 +80,7 @@ function ProjectCard({ project, index }) {
                     href={project.link}
                     target="_blank"
                     rel="noreferrer"
-                    className="rounded-lg bg-transparent text-fun-pink border border-1 border-fun-pink py-1 px-2 cursor-pointer text-xs hover:opacity-50 flex gap-1"
+                    className="rounded-lg bg-transparent text-fun-pink border border-fun-border-light py-1 px-2 cursor-pointer text-xs hover:opacity-50 flex gap-1"
                   >
                     <p>Live site </p>
                     <Image
@@ -96,7 +96,7 @@ function ProjectCard({ project, index }) {
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="rounded-lg bg-transparent text-fun-pink border border-1 border-fun-pink py-1 px-2 cursor-pointer text-xs hover:opacity-65 flex gap-1"
+                    className="rounded-lg bg-transparent text-fun-pink border border-fun-border-light py-1 px-2 cursor-pointer text-xs hover:opacity-65 flex gap-1"
                   >
                     <p>GitHub </p>
                     <Image

@@ -7,8 +7,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["'Public Sans'", "system-ui", "sans"],
-      monospace: ["Chivo Mono", "monospace"],
+      sans: ["Space Grotesk", "system-ui", "sans"],
+      monospace: ["Cousine", "monospace"],
     },
     colors: {
       black: colors.black,
@@ -26,7 +26,9 @@ module.exports = {
     extend: {
       colors: {
         bg: "#08090f",
-        "fun-card": "#181f2f",
+        "fun-border": "#213156",
+        "fun-border-light": "#304880",
+        "fun-card": "#17233d7b",
         "fun-gray-light": "#d0e4f2",
         "fun-gray": "#7b89a8",
         "fun-gray-medium": "#767c85",

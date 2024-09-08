@@ -22,7 +22,7 @@ export default function Home({ posts }) {
       meta={{ desc: "Muhammad Asyraf Faiz Kamil's Personal Website" }}
     >
       <Hero />
-      <div className="mt-20 space-y-32">
+      <div className="mt-24 xl:mt-32 space-y-32">
         <Projects />
         <Skills />
         <Blog posts={posts} />

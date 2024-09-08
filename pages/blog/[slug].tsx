@@ -86,7 +86,7 @@ export default function BlogPage({ posts: { source, frontmatter } }) {
           Faiz Kamil
         </p>
       </div>
-      <div className="flex flex-col items-start px-3 py-6 md:py-8 md:px-6 gap-3 md:gap-6 rounded-xl shadow-lg bg-fun-card sm:w-[55rem] mb-16">
+      <div className="flex flex-col items-start px-3 py-6 md:py-8 md:px-6 gap-3 md:gap-6 rounded-xl shadow-lg bg-fun-card border-2 border-fun-border sm:w-[55rem] mb-16">
         <article className="px-2 flex flex-col gap-2 sm:gap-5 w-full text-start">
           <MDXRemote
             {...source}

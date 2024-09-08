@@ -15,7 +15,7 @@ export default function ExperienceCard(
   key: number
 ) {
   return (
-    <div className="flex flex-col items-center gap-1" key={key}>
+    <div className="flex flex-col items-center gap-2" key={key}>
       <div
         className={`${experience.companyName === "Metamata.id" ? "mb-2" : ""}`}
       >
@@ -28,16 +28,21 @@ export default function ExperienceCard(
           />
         </a>
       </div>
-      <h1 className="text-fun-pink-light text-lg sm:text-2xl">
-        <span className="font-bold">{experience.companyName}</span>:{" "}
-        {experience.position}
-      </h1>
-      <span className="text-fun-gray-light border border-fun-gray-light bg-transparent px-2 py-1 rounded-lg text-xs sm:text-sm italic font-medium hover:text-bg hover:bg-fun-gray-light">
-        {experience.employmentType}
-      </span>
-      <p className="text-sm sm:text-base text-gray-200">
-        {experience.duration}
-      </p>
+      <div className="flex flex-col items-center gap-1">
+        <h1 className="text-fun-pink-light text-lg sm:text-2xl font-medium">
+          {experience.position}
+        </h1>
+        <h1 className="text-fun-pink-light text-lg sm:text-2xl flex gap-2 items-center">
+          <span className="font-bold">{experience.companyName}</span>
+          <span>·</span>
+          <span className="text-fun-gray-light text-sm sm:text-base italic font-medium">
+            {experience.employmentType}
+          </span>
+        </h1>
+        <p className="text-sm sm:text-base text-gray-200">
+          {experience.duration}
+        </p>
+      </div>
     </div>
   );
 }
