@@ -8,7 +8,7 @@ export default function BlogPage({ posts }) {
       {posts.map((frontMatter, index) => {
         return (
           <div
-            className="flex flex-col gap-1 text-start shadow-lg bg-fun-card border-fun-border border-2 rounded-xl p-4"
+            className="flex flex-col gap-1 text-start shadow-xl bg-gradient-to-br from-fun-card via-transparent to-fun-card backdrop-blur-sm border-fun-border border-2 rounded-xl p-4"
             key={index}
           >
             <Link href={`/blog/${frontMatter.slug}`}>

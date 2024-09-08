@@ -6,7 +6,7 @@ import Link from "next/link";
 function ProjectCard({ project, index }) {
   return (
     <div
-      className={`shadow-lg bg-fun-card rounded-xl max-w-full grid max-sm:grid-flow-row max-sm:auto-rows-max sm:grid-cols-2 gap-4 py-4 sm:py-8 px-4 border border-fun-border`}
+      className={`shadow-xl bg-gradient-to-br from-fun-card via-transparent to-fun-card backdrop-blur-sm rounded-xl max-w-full grid max-sm:grid-flow-row max-sm:auto-rows-max sm:grid-cols-2 gap-4 py-4 sm:py-8 px-4 border border-fun-border`}
       key={project.id}
     >
       <Link
