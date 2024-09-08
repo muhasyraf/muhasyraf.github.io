@@ -17,7 +17,15 @@ function Hero() {
         a Grateful{" "}
         <span className="heroShiny1 text-fun-pink">Lifelong Learner</span>{" "}
       </h1>
-      <div className="scrollDown flex flex-col justify-center items-center">
+      <div
+        onClick={() => {
+          const element = document.getElementById("projectsSection");
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }}
+        className="scrollDown flex flex-col justify-center items-center cursor-pointer"
+      >
         <p className="text-base text-gray-400">Scroll down</p>
         <img
           src="/static/icons/arrow-up.svg"

@@ -6,7 +6,10 @@ import ProjectCard from "../projects/ProjectCard";
 
 function ProjectsPage() {
   return (
-    <div className="flex flex-col text-left justify-between sm:px-4 pt-8 relative">
+    <div
+      className="flex flex-col text-left justify-between sm:px-4 pt-8 relative"
+      id="projectsSection"
+    >
       <div id="learnmore">
         <SectionTitle title="Some projects i have worked on" />
       </div>
