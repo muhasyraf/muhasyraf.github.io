@@ -99,7 +99,7 @@ export default function BlogPage({ posts: { source, frontmatter } }) {
           />
         </article>
       </div>
-      <Link href={`/blog`} className="mt-2 self-center">
+      <Link href={"/blog"} className="mt-2 self-center">
         <div className="text-fun-gray-light hover:underline">
           Back to all posts
         </div>
