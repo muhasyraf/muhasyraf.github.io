@@ -23,7 +23,7 @@ export default function ExperienceCard(
           <img
             src={experience.image}
             alt={`${experience.companyName} Logo`}
-            className={`w-[12rem] sm:w-[15rem]`}
+            className={"w-[12rem] sm:w-[15rem]"}
             style={experience.imagestyle}
           />
         </a>
