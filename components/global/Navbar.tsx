@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { Routes } from "@/data/global";
+import Image from "next/image";
 
 function Navbar({ currentPage }) {
   return (
@@ -9,10 +10,11 @@ function Navbar({ currentPage }) {
         <li className="list-none font-bold text-lg cursor-pointer">
           <Link href="/">
             <span className="font-black text-xl flex items-center">
-              <img
+              <Image
                 className="mr-2 transform hover:rotate-360 hover:scale-75 transition-transform duration-500 rounded-full"
                 src="/static/img/linkedinprofilecropcomp.png"
-                width="40"
+                width={40}
+                height={40}
                 alt="Asyraf's Profile Picture"
               />
               {"Asyraf".split("").map((letter, index) => {

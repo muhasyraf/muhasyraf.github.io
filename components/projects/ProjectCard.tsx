@@ -17,10 +17,12 @@ function ProjectCard({ project, index }) {
           "shadow-lg h-max relative rounded-xl transition hover:-translate-y-2 hover:opacity-75 will-change-projectCard justify-self-center self-center"
         }
       >
-        <img
+        <Image
           className="w-max rounded-xl transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard max-h-[250px] sm:max-h-[350px]"
+          width={500}
+          height={500}
           src={project.img}
-          alt="Project Image"
+          alt={`${project.title} Project`}
         />
       </Link>
       <div

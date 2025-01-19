@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Routes } from "@/data/global";
 import useDelayedRender from "use-delayed-render";
+import Image from "next/image";
 
 export default function MobileNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,10 +40,11 @@ export default function MobileNavbar() {
       >
         <li className="list-none font-bold text-lg">
           <Link href="/">
-            <img
+            <Image
               className="mr-3 rounded-full"
               src="/static/img/linkedinprofilecropcomp.png"
-              width="50"
+              width={50}
+              height={50}
               alt="Asyraf's Profile Picture"
             />
           </Link>

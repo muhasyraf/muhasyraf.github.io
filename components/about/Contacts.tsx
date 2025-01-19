@@ -1,5 +1,6 @@
 import React from "react";
 import { Contact } from "@/data/content/about";
+import Image from "next/image";
 
 export default function Contacts() {
   return (
@@ -18,7 +19,13 @@ export default function Contacts() {
               className="flex flex-row gap-1 justify-center items-center tooltip transition hover:-translate-y-1.5 text-fun-pink-light hover:underline cursor-pointer"
               data-tip={item.platform}
             >
-              <img src={item.icon} alt="Platform Icon" className="w-5 md:w-7" />
+              <Image
+                width={28}
+                height={28}
+                src={item.icon}
+                alt="Platform Icon"
+                className="w-5 md:w-7"
+              />
               <h1 className="font-bold text-sm sm:text-base">
                 {item.username}
               </h1>
