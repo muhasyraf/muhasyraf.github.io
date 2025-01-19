@@ -1,4 +1,3 @@
-import CTA from "@/components/home/CTA";
 import Hero from "@/components/home/Hero";
 import Page from "@/components/utility/Page";
 import Projects from "@/components/home/Projects";
@@ -26,7 +25,6 @@ export default function Home({ posts }) {
         <Projects />
         <Skills />
         <Blog posts={posts} />
-        {/* <Posts allPosts={allPosts} /> */}
       </div>
     </Page>
   );

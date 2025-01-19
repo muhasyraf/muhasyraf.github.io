@@ -4,7 +4,6 @@ import { AllKebabTags, AllTags, Projects } from "@/data/content/projects";
 import { KebabCase, KebabArray } from "@/utils/utils";
 import ProjectsPage from "components/projects/Projects";
 import Heading from "components/projects/Heading";
-import More from "components/projects/More";
 import Link from "next/link";
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -61,7 +60,6 @@ function PostPage({ filteredProjects, tag }) {
           View All
         </div>
       </Link>
-      {/* <More /> */}
     </Page>
   );
 }

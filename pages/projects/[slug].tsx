@@ -35,7 +35,7 @@ export const getStaticProps: GetStaticProps = async ({
   };
 };
 
-function PostPage({ filteredProjects, slug }) {
+function PostPage({ filteredProjects }) {
   return (
     <Page
       currentPage="Projects"
@@ -62,7 +62,7 @@ function PostPage({ filteredProjects, slug }) {
         <div className="flex flex-col gap-2 py-4 text-start">
           <p className="font-light text-sm text-fun-gray-light">Built with</p>
           <ul className="flex flex-wrap items-center list-none gap-2">
-            {filteredProjects[0].tags.map((tag, index) => {
+            {filteredProjects[0].tags.map((tag) => {
               return (
                 <li key={tag}>
                   <Link href={`/projects/tag/${KebabCase(tag)}`}>

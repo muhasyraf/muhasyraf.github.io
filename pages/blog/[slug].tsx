@@ -4,7 +4,6 @@ import Link from "next/link";
 import { getSlugs, getPostBySlug } from "@/utils/mdx";
 import { serialize } from "next-mdx-remote/serialize";
 import rehypeSlug from "rehype-slug";
-import rehypeHighlight from "rehype-highlight";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeCodeTitles from "rehype-code-titles";
 import rehypeExternalLinks from "rehype-external-links";

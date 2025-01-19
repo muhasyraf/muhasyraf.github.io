@@ -3,7 +3,6 @@ import fs from "fs";
 import matter from "gray-matter";
 import readingTime from "reading-time";
 import { sync } from "glob";
-import { notFound } from "next/navigation";
 
 const postsPath = path.join(process.cwd(), "data/blog");
 
