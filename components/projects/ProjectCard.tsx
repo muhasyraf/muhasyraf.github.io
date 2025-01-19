@@ -49,9 +49,9 @@ function ProjectCard({ project, index }) {
               index % 2 !== 0 ? "sm:justify-end" : "sm:justify-start"
             } list-none gap-2`}
           >
-            {project.tags.map((tag, index) => {
+            {project.tags.map((tag) => {
               return (
-                <li key={index}>
+                <li key={tag}>
                   <Link href={`/projects/tag/${KebabCase(tag)}`}>
                     <div className="rounded-lg bg-transparent font-monospace text-fun-pink border border-fun-border-light py-1 px-2 cursor-pointer text-xs hover:bg-fun-pink hover:text-bg hover:border-bg">
                       {tag}
