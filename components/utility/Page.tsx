@@ -3,14 +3,9 @@ import Head from "next/head";
 import Script from "next/script";
 import MobileNavbar from "../global/MobileNavbar";
 import Navbar from "../global/Navbar";
-import React, { ReactChildren } from "react";
+import React from "react";
 
-function Page({
-  currentPage,
-  addClass,
-  meta: { title, desc },
-  children,
-}: PageProps) {
+function Page({ currentPage, addClass, meta: { desc }, children }: PageProps) {
   const pageTitle = `${
     currentPage === "Home"
       ? "Home - Muhammad Asyraf Faiz Kamil"

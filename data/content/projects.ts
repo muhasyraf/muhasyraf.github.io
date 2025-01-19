@@ -1,4 +1,4 @@
-import { KebabCase, KebabArray } from "@/utils/utils";
+import { KebabCase } from "@/utils/utils";
 import { Project } from "types";
 
 let id = 0;

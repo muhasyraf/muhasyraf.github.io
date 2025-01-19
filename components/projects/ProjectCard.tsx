@@ -6,12 +6,16 @@ import Link from "next/link";
 function ProjectCard({ project, index }) {
   return (
     <div
-      className={"shadow-xl bg-gradient-to-br from-fun-card via-transparent to-fun-card backdrop-blur-sm rounded-xl max-w-full grid max-sm:grid-flow-row max-sm:auto-rows-max sm:grid-cols-2 gap-4 py-4 sm:py-8 px-4 border border-fun-border"}
+      className={
+        "shadow-xl bg-gradient-to-br from-fun-card via-transparent to-fun-card backdrop-blur-sm rounded-xl max-w-full grid max-sm:grid-flow-row max-sm:auto-rows-max sm:grid-cols-2 gap-4 py-4 sm:py-8 px-4 border border-fun-border"
+      }
       key={project.id}
     >
       <Link
         href={`/projects/${KebabCase(project.title)}`}
-        className={"shadow-lg h-max relative rounded-xl transition hover:-translate-y-2 hover:opacity-75 will-change-projectCard justify-self-center self-center"}
+        className={
+          "shadow-lg h-max relative rounded-xl transition hover:-translate-y-2 hover:opacity-75 will-change-projectCard justify-self-center self-center"
+        }
       >
         <img
           className="w-max rounded-xl transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard max-h-[250px] sm:max-h-[350px]"
@@ -47,7 +51,7 @@ function ProjectCard({ project, index }) {
           >
             {project.tags.map((tag, index) => {
               return (
-                <li key={tag}>
+                <li key={index}>
                   <Link href={`/projects/tag/${KebabCase(tag)}`}>
                     <div className="rounded-lg bg-transparent font-monospace text-fun-pink border border-fun-border-light py-1 px-2 cursor-pointer text-xs hover:bg-fun-pink hover:text-bg hover:border-bg">
                       {tag}
@@ -110,7 +114,9 @@ function ProjectCard({ project, index }) {
               </div>
               <Link href={`/projects/${KebabCase(project.title)}`}>
                 <div
-                  className={" text-fun-gray cursor-pointer text-xs hover:text-fun-pink flex gap-1"}
+                  className={
+                    " text-fun-gray cursor-pointer text-xs hover:text-fun-pink flex gap-1"
+                  }
                 >
                   <p
                     className={`${
