@@ -28,7 +28,11 @@ export async function getStaticPaths() {
 export async function getStaticProps(
   ctx: GetStaticPropsContext<{ slug: string }>
 ) {
-  const { slug } = ctx.params!;
+  if (!ctx.params || !ctx.params.slug) {
+    return { notFound: true };
+  }
+
+  const { slug } = ctx.params;
   const { content, frontmatter } = await getPostBySlug(slug);
   const mdxSource = await serialize(content, {
     mdxOptions: {

@@ -2,11 +2,20 @@ import React from "react";
 import { ProfileSummary } from "@/data/content/about";
 
 function parseProfileSummary() {
-  return ProfileSummary.map((item, index) => {
-    const { content } = item;
-    const theObject = { __html: content };
-    return <div key={index} dangerouslySetInnerHTML={theObject} />;
-  });
+  return ProfileSummary.map((item, index) => (
+    <div key={index}>
+      {item.content.map((segment, segIndex) => {
+        if (segment.highlights && segment.highlights.length > 0) {
+          return (
+            <span key={segIndex} className={segment.highlights.join(" ")}>
+              {segment.text}
+            </span>
+          );
+        }
+        return <span key={segIndex}>{segment.text}</span>;
+      })}
+    </div>
+  ));
 }
 
 export default function Profile() {

@@ -1,6 +1,7 @@
 import React from "react";
 import { Experience } from "@/data/content/about";
 import ExperienceCard from "@/components/about/ExperienceCard";
+import Image from "next/image";
 
 export default function Experiences() {
   return (
@@ -15,7 +16,12 @@ export default function Experiences() {
               <ExperienceCard experience={item} />
               {index !== Experience.length - 1 && (
                 <div className="divider divider-secondary">
-                  <img src="/static/icons/arrow-up.svg" alt="Arrow" />
+                  <Image
+                    width={32}
+                    height={32}
+                    src="/static/icons/arrow-up.svg"
+                    alt="Arrow"
+                  />
                 </div>
               )}
             </div>

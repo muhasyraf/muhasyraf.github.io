@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 type Experience = {
@@ -20,8 +21,10 @@ export default function ExperienceCard(
         className={`${experience.companyName === "Metamata.id" ? "mb-2" : ""}`}
       >
         <a href={experience.link} target="_blank" rel="noopener noreferrer">
-          <img
+          <Image
             src={experience.image}
+            width={240}
+            height={240}
             alt={`${experience.companyName} Logo`}
             className={"w-[12rem] sm:w-[15rem]"}
             style={experience.imagestyle}

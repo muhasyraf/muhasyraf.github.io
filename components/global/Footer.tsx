@@ -21,6 +21,7 @@ function FooterPage() {
                         <a
                           href={item.link}
                           target="_blank"
+                          rel="noopener noreferrer"
                           className="items-center flex justify-center"
                         >
                           {item.icon && (

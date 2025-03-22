@@ -1,6 +1,13 @@
+import Image from "next/image";
 import React from "react";
 
 function Hero() {
+  const scrollToProjects = () => {
+    const element = document.getElementById("projectsSection");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div
       className="relative heroElem w-full pt-28 pb-56 mx-auto mt-10 flex justify-center text-center flex-col items-center z-1"
@@ -18,44 +25,49 @@ function Hero() {
         <span className="heroShiny1 text-fun-pink">Lifelong Learner</span>{" "}
       </h1>
       <div
-        onClick={() => {
-          const element = document.getElementById("projectsSection");
-          if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
-          }
-        }}
+        onClick={scrollToProjects}
         className="scrollDown flex flex-col justify-center items-center cursor-pointer"
       >
         <p className="text-base text-gray-400">Scroll down</p>
-        <img
+        <Image
           src="/static/icons/arrow-up.svg"
           alt="Arrow Icon"
           className="rotate-180 w-5 scroll-arrow"
+          width={90}
+          height={90}
         />
       </div>
-      <img
+      <Image
         className="sqD top-[0px] left-2 sm:left-40 max-sm:block sm:hidden lg:block"
         style={{ animationDelay: "1s" }}
         src="/static/sqd/laravel.svg"
+        width={90}
+        height={90}
         alt="laravel"
       />
-      <img
+      <Image
         className="sqD top-20 sm:top-[40px] right-[5%] sm:right-[170px] max-sm:block sm:hidden lg:block"
         style={{ animationDelay: "0.1s" }}
         src="/static/sqd/react.svg"
         alt="react"
+        width={90}
+        height={90}
       />
-      <img
+      <Image
         className="sqD bottom-36 sm:top-60 left-16 sm:left-72 max-sm:block sm:hidden lg:block"
         style={{ animationDelay: "0.5s" }}
         src="/static/sqd/code.svg"
         alt="code"
+        width={90}
+        height={90}
       />
-      <img
+      <Image
         className="sqD exclude-sqD bottom-28 sm:top-72 right-10 sm:right-[295px]"
         style={{ animationDelay: "1s" }}
         src="/static/sqd/github.svg"
         alt="github"
+        width={90}
+        height={90}
       />
     </div>
   );

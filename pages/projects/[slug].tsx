@@ -46,9 +46,11 @@ function PostPage({ filteredProjects }) {
     >
       <Heading title={filteredProjects[0].title} />
       <div className="flex flex-col px-2 md:px-10 pb-5 gap-1">
-        <img
+        <Image
           src={filteredProjects[0].img}
-          alt=""
+          alt={filteredProjects[0].title}
+          width={550}
+          height={400}
           className="w-1/2 self-center rounded-md"
         />
         <div className="text-start mt-3">

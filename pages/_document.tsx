@@ -1,9 +1,14 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
+import { spaceGrotesk, cousine } from "@/data/lib/fonts";
 
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en" data-theme="business">
+      <Html
+        lang="en"
+        data-theme="business"
+        className={`${spaceGrotesk.variable} ${cousine.variable}`}
+      >
         <Head>
           <link
             rel="apple-touch-icon"

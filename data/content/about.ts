@@ -6,7 +6,10 @@ type Contact = {
 };
 
 type ProfileSummary = {
-  content: string;
+  content: {
+    text: string;
+    highlights?: string[];
+  }[];
 };
 
 type Experience = {
@@ -54,24 +57,41 @@ export const Contact: Contact[] = [
 
 export const ProfileSummary: ProfileSummary[] = [
   {
-    content: `I'm <span class="font-bold">Asyraf</span>, a 21-year-old
-  Information Systems student at UIN Syarif Hidayatullah Jakarta. I'm
-  passionate about <span class="font-bold">full-stack development</span> and creating
-  web applications that are user-friendly, responsive, and scalable.`,
+    content: [
+      { text: "I'm " },
+      { text: "Asyraf", highlights: ["font-bold"] },
+      {
+        text: ", a 21-year-old Information Systems student at UIN Syarif Hidayatullah Jakarta. I'm passionate about ",
+      },
+      { text: "full-stack development", highlights: ["font-bold"] },
+      {
+        text: " and creating web applications that are user-friendly, responsive, and scalable.",
+      },
+    ],
   },
   {
-    content: `I have expertise in both <span class="font-bold">front-end</span>
-  and <span class="font-bold">back-end development</span>, as well
-  as database management and deployment. Some of the tools and
-  frameworks that I use are Laravel, Next.js, React, ExpressJS, MySQL,
-  MongoDB, TailwindCSS, Git, and many more.`,
+    content: [
+      { text: "I have expertise in both " },
+      { text: "front-end", highlights: ["font-bold"] },
+      { text: " and " },
+      { text: "back-end development", highlights: ["font-bold"] },
+      {
+        text: ", as well as database management and deployment. Some of the tools and frameworks that I use are Laravel, Next.js, React, ExpressJS, MySQL, MongoDB, TailwindCSS, Git, and many more.",
+      },
+    ],
   },
   {
-    content: `I’m always curious and eager to learn more and challenge myself in the
-  field of technology. I’m particularly interested in
-  <span class="font-bold">cloud computing</span> and
-  <span class="font-bold">blockchain</span>, and I’m currently
-  studying and experimenting with these topics.`,
+    content: [
+      {
+        text: "I'm always curious and eager to learn more and challenge myself in the field of technology. I'm particularly interested in ",
+      },
+      { text: "cloud computing", highlights: ["font-bold"] },
+      { text: " and " },
+      { text: "blockchain", highlights: ["font-bold"] },
+      {
+        text: ", and I'm currently studying and experimenting with these topics.",
+      },
+    ],
   },
 ];
 
