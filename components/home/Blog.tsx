@@ -4,7 +4,18 @@ import Link from "next/link";
 import dayjs from "dayjs";
 import Image from "next/image";
 
-export default function Blog({ posts }) {
+/**
+ * Renders a blog section displaying the latest blog posts.
+ *
+ * @param {Object} props - The component props.
+ * @param {Array} props.posts - An array of blog post objects to display.
+ * @returns {React.ReactElement} A section with the latest blog posts and a call-to-action link.
+ */
+export default function Blog({
+  posts,
+}: {
+  posts: Array<any>;
+}): React.ReactElement {
   return (
     <div className="flex flex-col text-left max-w-md md:max-w-full w-full m-auto">
       <SectionTitle title="Here are My Latest Posts!" />

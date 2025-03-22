@@ -2,6 +2,12 @@ import Image from "next/image";
 import React from "react";
 
 function Hero() {
+  const scrollToProjects = () => {
+    const element = document.getElementById("projectsSection");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div
       className="relative heroElem w-full pt-28 pb-56 mx-auto mt-10 flex justify-center text-center flex-col items-center z-1"
@@ -19,12 +25,7 @@ function Hero() {
         <span className="heroShiny1 text-fun-pink">Lifelong Learner</span>{" "}
       </h1>
       <div
-        onClick={() => {
-          const element = document.getElementById("projectsSection");
-          if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
-          }
-        }}
+        onClick={scrollToProjects}
         className="scrollDown flex flex-col justify-center items-center cursor-pointer"
       >
         <p className="text-base text-gray-400">Scroll down</p>

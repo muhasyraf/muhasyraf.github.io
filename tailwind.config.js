@@ -4,11 +4,12 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./data/lib/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     fontFamily: {
-      sans: ["Space Grotesk", "system-ui", "sans"],
-      monospace: ["Cousine", "monospace"],
+      sans: ["var(--font-space-grotesk)", "system-ui", "sans-serif"],
+      monospace: ["var(--font-cousine)", "monospace"],
     },
     colors: {
       black: colors.black,
