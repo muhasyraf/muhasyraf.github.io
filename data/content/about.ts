@@ -61,11 +61,13 @@ export const ProfileSummary: ProfileSummary[] = [
       { text: "I'm " },
       { text: "Asyraf", highlights: ["font-bold"] },
       {
-        text: ", a 21-year-old Information Systems student at UIN Syarif Hidayatullah Jakarta. I'm passionate about ",
+        text: ", a 23-year-old Information Systems graduate from UIN Syarif Hidayatullah Jakarta. I'm passionate about ",
       },
       { text: "full-stack development", highlights: ["font-bold"] },
+      { text: " and " },
+      { text: "DevOps", highlights: ["font-bold"] },
       {
-        text: " and creating web applications that are user-friendly, responsive, and scalable.",
+        text: ", building web applications that are user-friendly, responsive, and scalable.",
       },
     ],
   },
@@ -76,26 +78,58 @@ export const ProfileSummary: ProfileSummary[] = [
       { text: " and " },
       { text: "back-end development", highlights: ["font-bold"] },
       {
-        text: ", as well as database management and deployment. Some of the tools and frameworks that I use are Laravel, Next.js, React, ExpressJS, MySQL, MongoDB, TailwindCSS, Git, and many more.",
+        text: ", as well as database management and deployment. Some of the tools and frameworks that I use are Laravel, Next.js, React, Golang, ExpressJS, PostgreSQL, MongoDB, TailwindCSS, and many more.",
       },
     ],
   },
   {
     content: [
+      { text: "On the " },
+      { text: "DevOps", highlights: ["font-bold"] },
       {
-        text: "I'm always curious and eager to learn more and challenge myself in the field of technology. I'm particularly interested in ",
+        text: " side, I handle deployment automation with ",
       },
-      { text: "cloud computing", highlights: ["font-bold"] },
-      { text: " and " },
-      { text: "blockchain", highlights: ["font-bold"] },
+      { text: "CI/CD pipelines", highlights: ["font-bold"] },
+      { text: ", " },
+      { text: "Docker", highlights: ["font-bold"] },
+      { text: ", and " },
+      { text: "Kubernetes", highlights: ["font-bold"] },
       {
-        text: ", and I'm currently studying and experimenting with these topics.",
+        text: ". I'm always eager to learn more — my next area of focus is ",
+      },
+      { text: "DevSecOps", highlights: ["font-bold"] },
+      {
+        text: " and everything related to security in the development lifecycle.",
       },
     ],
   },
 ];
 
 export const Experience: Experience[] = [
+  {
+    companyName: "NBS",
+    position: "Software Engineer",
+    employmentType: "Contract",
+    image: "/static/icons/about/logo-nbs.png",
+    imagestyle: {
+      "border-radius": "0.5rem",
+      "background-color": "rgb(255 255 255)",
+    },
+    link: "https://nbs.co.id/",
+    duration: "June 2025 - Current",
+  },
+  {
+    companyName: "NBS",
+    position: "Software Engineer",
+    employmentType: "Freelance",
+    image: "/static/icons/about/logo-nbs.png",
+    imagestyle: {
+      "border-radius": "0.5rem",
+      "background-color": "rgb(255 255 255)",
+    },
+    link: "https://nbs.co.id/",
+    duration: "February 2025 - May 2025",
+  },
   {
     companyName: "NBS",
     position: "Software Engineer",
@@ -106,7 +140,7 @@ export const Experience: Experience[] = [
       "background-color": "rgb(255 255 255)",
     },
     link: "https://nbs.co.id/",
-    duration: "July 2024 - Current",
+    duration: "July 2024 - January 2025",
   },
   {
     companyName: "Meta Mata",
